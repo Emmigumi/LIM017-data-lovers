@@ -5,5 +5,7 @@ export const example = () => {
 };
 
 export const anotherExample = () => {
-  return 'OMG';
+  return 'OMG-1';
 };
+
+
