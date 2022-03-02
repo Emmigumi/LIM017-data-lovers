@@ -274,6 +274,11 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 - [ ] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
 
+  <details><summary>Links</summary><p>
+
+  * [LMS Testing usabilidad](https://lms.laboratoria.la/cohorts/lim-2022-01-bootcamp-js-lim017/topics/user-understanding/00-qualitative-research/07-usability-testing)
+</p></details>
+
 ## 4. Consideraciones generales
 
 * Este proyecto se debe resolver en duplas.
@@ -529,7 +534,7 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
    tus _coaches_ te compartirán un _link_ a un repo y te darán acceso de lectura
    en ese repo. La otra integrante del equipo deber hacer un fork **del
    repositorio de su compañera** y
-   [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote`
+   [configurar](https://gist.github.com/SabAlej/b8d8f3a95c3cda5c0ad08a3ebce0f092) un `remote`
    hacia el mismo.
 2. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
    tu *fork* a tu computadora (copia local).
@@ -583,10 +588,11 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 #### Organización del Trabajo
 
 * [Historias de Usuario](https://www.youtube.com/watch?v=ky6wFiF5vMk&t=344s).
-  Ojo que Cris no diferencia _Definición de terminado_ de _Criterios de
+  Ojo que el usuario (en el video Cris) no diferencia _Definición de terminado_ de _Criterios de
   Aceptación_ y nosotros sí lo haremos. Más detalles en la guía.
 * [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
 * [Guía para Data Lovers](https://docs.google.com/presentation/d/e/2PACX-1vQhx9D36NjpH-Daea-ITPUDUzNL8ZiNAprq_7b5PSUrfutk45tEtaOLz2lmd8f54_5jX1hypDM8f8SM/pub?start=false&loop=false&delayms=60000)
+* [Serie de articulos de Testeos con usabilidad](https://eugeniacasabona.medium.com/pruebas-con-usuarios-1-qu%C3%A9-cu%C3%A1ndo-y-para-qu%C3%A9-testeamos-7c3a89b4b5e7)
 
 ## 9. Checklist
 

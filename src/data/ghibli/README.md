@@ -18,11 +18,11 @@ hallazgos.
   saber cuántas y cuáles son.
 - Las animaciones tienen directorxs y productorxs. Estxs son las mentes detrás
   de una gran animación. En Studio Ghibli hay directorxs y productorxs que han
-  colaborado en la creación de más de una animación. Por ello, es importante
+  colaborado en la creación de más de una animación. Por ello, es importapnte
   para nuestra usuaria poder conocerlos y saber cuántas y cuáles son las
   animaciones a las que dieron "vida".
 - Las animaciones tienen información relevante para nuestras usuarias, como
-  descripción, fecha de lanzamiento, peso, director, productor y personajes.
+  descripción, fecha de lanzamiento, director, productor y personajes.
 - Cada animación tiene sus personajes, para nuestras usuarias es importante
   saber cuántos y cuáles son
 - Los personajes tienen características únicas que la usuaria quiere saber, como
