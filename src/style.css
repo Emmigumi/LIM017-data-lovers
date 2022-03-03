@@ -33,11 +33,11 @@ body {
     display: inline;
     width:90%;
     max-width: 450px;
+   
 }
 .partOfMenu li a{
     text-decoration:none;
     color:white;
-    /* padding:20px; */
     display:block;
 }
 
@@ -48,4 +48,41 @@ body {
 
 .partOfMenu li a:hover{
     background: #fa8703;
+}
+
+.slider-frame{
+    width: 1280px;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;
+
+    animation: slide 15s infinite;
+
+}
+
+.slider-frame ul{
+    display: flex;
+    padding: 0;
+    width: 300%;
+}
+
+.slider-frame li{
+    list-style: none;
+    width: 100%;
+}
+
+.slider-frame img{
+    width: 100%;
+}
+
+@keyframes slide {
+    0% {margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25% {margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70%{margin-left: -200%;}
+    
 }
