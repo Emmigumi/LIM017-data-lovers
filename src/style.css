@@ -33,13 +33,11 @@ body {
     display: inline;
     width:90%;
     max-width: 450px;
-   /*  margin:auto; */
    
 }
 .partOfMenu li a{
     text-decoration:none;
     color:white;
-    /* padding:20px; */
     display:block;
 }
 
