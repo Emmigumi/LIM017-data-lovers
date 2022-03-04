@@ -1,6 +1,7 @@
 *{
     margin:0;
     padding: 0;
+    box-sizing: border-box;
     font-family: arial, helvetica, monospace;
 }
 
@@ -58,19 +59,17 @@ span{
 }
 
 .slider-frame{
-    width: 1280px;
-    height: auto;
-    margin: 50px auto 0;
+    width: 85%;
+    height: 500px;
+    margin: 10px 8%;
     overflow: hidden;
-
-    animation: slide 15s infinite;
-
+    
 }
 
 .slider-frame ul{
     display: flex;
-    padding: 0;
-    width: 300%;
+    width: 400%;
+    animation: slide 15s infinite alternate linear;
 }
 
 .slider-frame li{
@@ -80,16 +79,17 @@ span{
 
 .slider-frame img{
     width: 100%;
+    height: 100%;
 }
 
 @keyframes slide {
     0% {margin-left: 0%;}
-    20%{margin-left: 0%;}
+    30%{margin-left: 0%;}
 
-    25% {margin-left: -100%;}
-    45%{margin-left: -100%;}
+    35% {margin-left: -150%;}
+    65%{margin-left: -150%;}
 
-    50% {margin-left: -200%;}
-    70%{margin-left: -200%;}
+    70% {margin-left: -300%;}
+    100%{margin-left: -300%;}
     
 }
