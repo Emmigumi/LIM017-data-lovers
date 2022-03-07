@@ -37,7 +37,7 @@ Porque desean conocer los personajes más queridos,
 #### Prototipo de alta fidelidad
 
 ## 4.Plan de acción
-#### Objetivos de aprendisaje Priorizados
+#### Objetivos de aprendizaje Priorizados
 ###### Briggtte
 ###### Jammie
 ## 5.Problemas detectados en test de usabilidad
