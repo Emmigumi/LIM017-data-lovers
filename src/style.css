@@ -7,47 +7,54 @@
 
 body {
     background-color:white;
-
 }
 
 .Menu{
     list-style: none;
     background-color: #161853;
     width: 99%;
-    margin:auto;
+    height: 80px;
     justify-content: space-between;
     display:flex;
     align-items: flex;
 }
 
-.img__menu{
-    max-height: 80px;
-    max-width: 80px;
+ .img__menu{
+     width: 10%;
     border-radius: 50%;
-    display: inline;
-    position: relative;
-    left: 20px;
-    top:5px;
+    height: 76px;
+    margin: auto;
+ }  
+
+span{
+    color: white;
+    width: 15%;
+    margin: auto;
 }
 
 .partOfMenu{
-    display: inline;
-    width:90%;
-    max-width: 450px;
-   
-}
-.partOfMenu li a{
-    text-decoration:none;
-    color:white;
-    display:block;
+    display: flex;
+    width:60%;
+    align-items: center;
 }
 
 .partOfMenu li{
-    display:inline-block;
-    text-align: center;
+    display: flex;
+    list-style: none;
+    width:25%;
+    height:100% ;
+    align-items: center;
 }
 
-.partOfMenu li a:hover{
+.partOfMenu li a{
+    text-decoration:none;
+    margin: auto;
+    text-align: center;
+    color:white;
+    align-items:center;
+}
+
+.partOfMenu li:hover{
     background: #fa8703;
 }
 
