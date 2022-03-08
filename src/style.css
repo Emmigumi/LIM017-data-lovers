@@ -1,8 +1,12 @@
+@font-face {
+    font-family: Poppins;
+    src: url(Fonts/Poppins-Regular.ttf);
+}
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: arial, helvetica, monospace;
+    font-family: Poppins;
 }
 
 body {
@@ -84,6 +88,7 @@ span{
     align-items: center;
     box-shadow: 4px 4px 8px gray;
 }
+
 .form label {
     width: 134px;
     height: 40px;
@@ -117,4 +122,58 @@ margin: 0 152px;
 .history h1{
 color:#EC255A;
 font-size: 15px;
+}
+
+.slider-frame{
+    width: 85%;
+    height: 400px;
+    margin: 10px 8%;
+    display: flex;
+    overflow: hidden;
+}
+
+.slider-frame ul{
+    display: flex;
+    list-style: none;
+    animation: slide 15s infinite alternate linear;
+}
+
+.slider-frame li{
+    list-style: none;
+}
+
+.slider-frame img{
+    height: 363px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px gray;
+}
+
+@keyframes slide {
+    0%{margin-left: 0%;}
+    10%{margin-left: 0%;}
+
+    15%{margin-left: 0%;}
+    25%{margin-left: 0%;}
+
+    30%{margin-left: -100%;}
+    40%{margin-left: -100%;}
+
+    45%{margin-left: -100%;}
+    55%{margin-left: -100%;}
+
+    60%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -200%;}
+    85%{margin-left: -200%;}
+
+    90%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+footer{
+    background-color: #161853;
+    height: 200px;
+    color: white;
 }
