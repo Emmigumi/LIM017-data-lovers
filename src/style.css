@@ -12,17 +12,17 @@ body {
 .Menu{
     list-style: none;
     background-color: #161853;
-    width: 99%;
-    height: 80px;
+    width: 1280px;
+    height: 138px;
     justify-content: space-between;
     display:flex;
     align-items: flex;
 }
 
- .img__menu{
-     width: 10%;
+.img__menu{
+    width: 10%;
     border-radius: 50%;
-    height: 76px;
+    height: 130px;
     margin: auto;
  }  
 
@@ -59,58 +59,62 @@ span{
 }
 
 .portada{
-    width: 85%;
-    height: 800px;
-    margin: 10px 8%;
+    width: 1280px;
+    height: 723px;
+    position: relative;
     overflow: hidden;
 }
 
 .portada img{
-    width: 100%;
-    height: 100%;
+    width: 1166px;
+    height: 600px;
+    margin: 36px 57px;
 }
 
-.portada form{
+.form{
     background-color:#161853;
-
+    width: 976px;
+    height: 172px;
+    margin: 0 152px;
+    border-radius:16px;
+    border:none;
+    position:absolute;
+    top:550px;
+    display:flex;
+    align-items: center;
+    box-shadow: 4px 4px 8px gray;
 }
-
-
-
-
-
-/* .slider-frame{
-    width: 85%;
-    height: 500px;
-    margin: 10px 8%;
-    overflow: hidden;
-    
+.form label {
+    width: 134px;
+    height: 40px;
+    font-size:20px;
+    margin: auto;
+    padding:10px 0px;
+    text-align: center;
+    color:aliceblue;
 }
-
-.slider-frame ul{
-    display: flex;
-    width: 400%;
-    animation: slide 15s infinite alternate linear;
+#text{
+width:497px;
+height: 40px;
+margin: auto;
+border-radius:8px;
+border:none;
 }
-
-.slider-frame li{
-    list-style: none;
-    width: 100%;
+.form button{
+    width:99px;
+    height: 40px;
+    margin: auto;
+    border-radius:8px;
+    background-color:#EC255A;
+    color:aliceblue;
+    border: none;
 }
-
-.slider-frame img{
-    width: 100%;
-    height: 100%;
+.history{
+width:972px;
+height:160px;
+margin: 0 152px;
 }
-
-@keyframes slide {
-    0% {margin-left: 0%;}
-    30%{margin-left: 0%;}
-
-    35% {margin-left: -150%;}
-    65%{margin-left: -150%;}
-
-    70% {margin-left: -300%;}
-    100%{margin-left: -300%;}
-    
-} */
+.history h1{
+color:#EC255A;
+font-size: 15px;
+}

@@ -1,5 +1,5 @@
 // estas funciones son de ejemplo
-/* export const example = () => {
+/*  export const example = () => {
   console.log('example');
 };
 export const anotherExample = () => {
