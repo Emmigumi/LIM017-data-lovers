@@ -1,11 +1,22 @@
 // estas funciones son de ejemplo
-
-export const example = () => {
-  return 'example';
+/* export const example = () => {
+  console.log('example');
 };
-
 export const anotherExample = () => {
-  return 'OMG-1';
-};
+  console.log('OMG-1');
+}; */
 
+//const dataLovers = {
+export function filterData (/* data, condition */){
+return "Holiwis";
+}
+export function sortData (/* data, sortBy, sortOrder */){
+return "mam";
+}
+export function computeStats (/* data */){
+return "Rayus";
+}
+//};
 
+//export default dataLovers;
+ 
