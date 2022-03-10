@@ -14,10 +14,10 @@
     <ul class="partOfMenu">
       <li><a href="#">Inicio</a></li>
       <li id="ListMovies"><a href="#">Movies</a></li>
-      <li><a href="#">Top 5</a></li>
       <li><a href="#">Statistics</a></li>
     </ul>
   </nav>
+
 <section id="onePage">
   <div class="portada">
     <div class="img"><img src="images/carrusel_1.jpg" alt=""></div>
@@ -27,38 +27,62 @@
       <button class="search-button">Search</button>
     </div>
     </div><br>
-    <div class="history">
-      <h1>History</h1>
-      <p>Studio Ghibli (スタジオジブリ Sutajio Jiburi?) es un estudio japonés de animación, considerado por la crítica especializada y muchos cinéfilos como uno de los mejores estudios de animación del mundo en la actualidad.​</p>
-      <p>El estudio es mejor conocido por sus largometrajes animados y también ha producido varios cortometrajes, comerciales de televisión y una película para televisión. Fue fundado el 15 de junio de 1985 por los directores Hayao Miyazaki e Isao Takahata y el productor Toshio Suzuki, después del éxito de la película de anime de Topcraft Nausicaä del Valle del Viento (1984). Studio Ghibli también ha colaborado con estudios de videojuegos en el desarrollo visual de varios videojuegos.</p>
-      <h1>Movie</h1>  
-    </div><br><br><br>
-  <div class="slider-frame">
-          <ul id="Carrusel">
-            <!-- <li><img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg" alt=""></li> -->
-          </ul>
-</div><br><br><br>
+
+  <div class="history">
+    <h3><b>History</b></h3><br><br>
+    <p>Studio Ghibli (スタジオジブリ Sutajio Jiburi?) es un estudio japonés de animación, considerado por la crítica
+      especializada y muchos cinéfilos como uno de los mejores estudios de animación del mundo en la actualidad.​</p>
+    <p>El estudio es mejor conocido por sus largometrajes animados y también ha producido varios cortometrajes,
+      comerciales de televisión y una película para televisión. Fue fundado el 15 de junio de 1985 por los directores
+      Hayao Miyazaki e Isao Takahata y el productor Toshio Suzuki, después del éxito de la película de anime de Topcraft
+      Nausicaä del Valle del Viento (1984). Studio Ghibli también ha colaborado con estudios de videojuegos en el
+      desarrollo visual de varios videojuegos.</p>
+  </div><br><br><br><br><br>
+
+
+  <div class="peliculas-recomendadas contenedor">
+    <div class="contenedor-titulo-controles">
+      <h3>Movies</h3>
+      <div class="indicadores"></div>
+    </div>
+
+    <div class="contenedor-principal">
+      <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+      <div class="contenedor-carousel">
+        <div class="carousel" id="carrusel"> <!-- Modifiqué aquí -->
+          <!-- <div class="pelicula">
+            <a href="#"><img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg" alt=""></a>
+          </div>-->
+
+        </div>
+      </div>
+
+      <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+    </div>
+  </div>
 </section>
 
 <main id="secondPage">
-  <titlte>MOVIE</titlte>
-  <ul id="AllMovie">
-  <li><img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg" alt=""></li>
-  </ul>
-<div id="AllPeople"></div>
-<div id="Locations"></div>
-<div id="Vehicles"></div>
-</div>
-</main>
+    <titlte>MOVIE</titlte>
+    <ul id="AllMovie">
+    <li><img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg" alt=""></li>
+    </ul>
+  <div id="AllPeople"></div>
+  <div id="Locations"></div>
+  <div id="Vehicles"></div>
+  </div>
+  </main>
 
-<footer id="footer">
-  <spam>
-    © STUDIO GHIBLI - Desarrollado por Briggtte B. y Jammie H. <br>
-    01-123456
-    <span><b>STUDIO GHIBLI</b></span>
-  </spam>
-</footer>
+  <footer id="footer">
+    <spam>
+      © STUDIO GHIBLI - Desarrollado por Briggtte B. y Jammie H. <br>
+      01-123456
+      <span><b>STUDIO GHIBLI</b></span>
+    </spam>
+  </footer>
 
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   <script src="main.js" type="module"></script>
 </body>
 
