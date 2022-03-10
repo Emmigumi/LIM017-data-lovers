@@ -16,7 +16,7 @@ body {
 .Menu{
     list-style: none;
     background-color: #161853;
-    width: 1280px;
+    width: 99%;
     height: 138px;
     justify-content: space-between;
     display:flex;
@@ -72,7 +72,7 @@ span{
 .portada img{
     width: 1166px;
     height: 600px;
-    margin: 36px 57px;
+    margin: 10px 8%;
 }
 
 .form{
@@ -119,58 +119,130 @@ width:972px;
 height:160px;
 margin: 0 152px;
 }
-.history h1{
+.history h3{
 color:#EC255A;
 font-size: 15px;
 }
+.history p{
+    text-align: justify;
+}
 
-.slider-frame{
-    width: 85%;
-    height: 400px;
-    margin: 10px 8%;
+.contenedor{
+    width: 90%;
+    margin: auto;
+}
+
+/* ---- ---- ---- Título y controles ---- ---- ---- */
+.contenedor-titulo-controles{
     display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.contenedor-titulo-controles h3{
+    color:#EC255A;
+    font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button{
+    background: #161853;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+    background: #EC255A;
+}
+
+/* ---- ---- ---- Contenedor principal y flechas ---- ---- ---- */
+.peliculas-recomendadas .contenedor-principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+position: absolute;
+border: none;
+background: rgba(0, 0, 0, 0.3);
+font-size:40px;
+height: 50%;
+top: calc(50% - 25%);
+line-height: 40px;
+width: 50px;
+color:#EC255A;
+cursor: pointer;
+z-index: 500;
+transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+    background: rgba(0, 0, 0, .9);
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda{
+    left:0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-derecha{
+    right:0;
+}
+
+/* ---- ---- ---- Carousel ---- ---- ---- */
+.peliculas-recomendadas .contenedor-carousel{
+    width: 100%;
+    padding: 20px 0;
     overflow: hidden;
+    scroll-behavior: smooth; /*evita que al seleccionar la imagen se desplace de forma delicada hacia arriba*/
 }
 
-.slider-frame ul{
+.peliculas-recomendadas .contenedor-carousel .carousel{
     display: flex;
-    list-style: none;
-    animation: slide 15s infinite alternate linear;
+    flex-wrap: nowrap;
 }
 
-.slider-frame li{
-    list-style: none;
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula{
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
 }
 
-.slider-frame img{
-    height: 363px;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 4px 4px 8px gray;
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover{
+    transform: scale(1.2);
+    transform-origin: center;
 }
 
-@keyframes slide {
-    0%{margin-left: 0%;}
-    10%{margin-left: 0%;}
-
-    15%{margin-left: 0%;}
-    25%{margin-left: 0%;}
-
-    30%{margin-left: -100%;}
-    40%{margin-left: -100%;}
-
-    45%{margin-left: -100%;}
-    55%{margin-left: -100%;}
-
-    60%{margin-left: -200%;}
-    70%{margin-left: -200%;}
-
-    75%{margin-left: -200%;}
-    85%{margin-left: -200%;}
-
-    90%{margin-left: -300%;}
-    100%{margin-left: -300%;}
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+    width: 100%;
+    vertical-align: top;
 }
+
+/* ---- ---- ---- Media Queries ---- ---- ---- */
+@media screen and (max-width:800px) {
+    .peliculas-recomendadas .contenedor-carousel{
+        overflow: visible;
+    }
+    
+    .peliculas-recomendadas .contenedor-carousel .carousel{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+
+    .peliculas-recomendadas .indicadores,
+    .peliculas-recomendadas .flecha-izquierda,
+    .peliculas-recomendadas .flecha-derecha {
+        display: none;
+    }
+}
+
+
 
 footer{
     background-color: #161853;
