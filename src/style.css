@@ -1,6 +1,12 @@
 #secondPage {
     display: none;
 }
+#threePage {
+    display: none;
+}
+#block {
+    display: none;
+}
 @font-face {
     font-family: Poppins;
     src: url(Fonts/Poppins-Regular.ttf);

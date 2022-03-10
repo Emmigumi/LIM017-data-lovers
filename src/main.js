@@ -12,11 +12,41 @@ const showListMovie=document.getElementById("ListMovies")
 showListMovie.addEventListener("click", ()=>{
     document.getElementById("onePage").style.display="none";
     document.getElementById("secondPage").style.display="block";
+    document.getElementById("thirdPage").style.display="none";
+    document.getElementById("fourPage").style.display="none";
     hiddenFotter.classList.remove("hidden");
     hiddenNav.classList.remove("hidden");
 });
 
+const showInicio=document.getElementById("inicio")
+showInicio.addEventListener("click", ()=>{
+    document.getElementById("onePage").style.display="block";
+    document.getElementById("secondPage").style.display="none";
+    document.getElementById("threePage").style.display="none";
+    document.getElementById("fourPage").style.display="none";
+    hiddenFotter.classList.remove("hidden");
+    hiddenNav.classList.remove("hidden");
+});
 
+const show3Page=document.querySelector(".search-button")
+show3Page.addEventListener("click", ()=>{
+    document.getElementById("onePage").style.display="none";
+    document.getElementById("secondPage").style.display="none";
+    document.getElementById("threePage").style.display="block";
+    document.getElementById("fourPage").style.display="none";
+    hiddenFotter.classList.remove("hidden");
+    hiddenNav.classList.remove("hidden");
+});
+
+const show4Page=document.querySelector("#stadist")
+show4Page.addEventListener("click", ()=>{
+    document.getElementById("onePage").style.display="none";
+    document.getElementById("secondPage").style.display="none";
+    document.getElementById("threePage").style.display="none";
+    document.getElementById("fourPage").style.display="block";
+    hiddenFotter.classList.remove("hidden");
+    hiddenNav.classList.remove("hidden");
+});
 // ---- ---- Variables para el carousel -------------------------------- ----
 const fila = document.querySelector('.contenedor-carousel');
 const peliculas = document.querySelectorAll('.pelicula');
