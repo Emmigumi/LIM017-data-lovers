@@ -1,56 +1,59 @@
 import * as dataLovers from './data.js';
+
+/* import {filterDataDirector,filterDataProducer} from "./data.js"; */
+
 //MOSTRAR Y OCULTAR
 import data from './data/ghibli/ghibli.js';
 
-const hiddenNav=document.getElementById("Menu");
+const hiddenNav = document.getElementById("Menu");
 hiddenNav.classList.add("hidden");
 
 const hiddenFotter = document.getElementById("footer");
 hiddenFotter.classList.add("hidden");
 
-const showListMovie=document.getElementById("ListMovies")
-showListMovie.addEventListener("click", ()=>{
-    document.getElementById("onePage").style.display="none";
-    document.getElementById("secondPage").style.display="block";
-    document.getElementById("threePage").style.display="none";
-    document.getElementById("fourPage").style.display="none";
+const showListMovie = document.getElementById("ListMovies")
+showListMovie.addEventListener("click", () => {
+    document.getElementById("onePage").style.display = "none";
+    document.getElementById("secondPage").style.display = "block";
+    document.getElementById("threePage").style.display = "none";
+    document.getElementById("fourPage").style.display = "none";
     hiddenFotter.classList.remove("hidden");
     hiddenNav.classList.remove("hidden");
 });
 
-const showInicio=document.getElementById("inicio")
-showInicio.addEventListener("click", ()=>{
-    document.getElementById("onePage").style.display="block";
-    document.getElementById("secondPage").style.display="none";
-    document.getElementById("threePage").style.display="none";
-    document.getElementById("fourPage").style.display="none";
+const showInicio = document.getElementById("inicio")
+showInicio.addEventListener("click", () => {
+    document.getElementById("onePage").style.display = "block";
+    document.getElementById("secondPage").style.display = "none";
+    document.getElementById("threePage").style.display = "none";
+    document.getElementById("fourPage").style.display = "none";
     hiddenFotter.classList.remove("hidden");
     hiddenNav.classList.remove("hidden");
 });
 
-const show3Page=document.querySelector(".search-button")
-show3Page.addEventListener("click", ()=>{
-    document.getElementById("onePage").style.display="none";
-    document.getElementById("secondPage").style.display="none";
-    document.getElementById("threePage").style.display="block";
-    document.getElementById("fourPage").style.display="none";
+const show3Page = document.querySelector(".search-button")
+show3Page.addEventListener("click", () => {
+    document.getElementById("onePage").style.display = "none";
+    document.getElementById("secondPage").style.display = "none";
+    document.getElementById("threePage").style.display = "block";
+    document.getElementById("fourPage").style.display = "none";
     hiddenFotter.classList.remove("hidden");
     hiddenNav.classList.remove("hidden");
 });
 
-const show4Page=document.querySelector("#stadist")
-show4Page.addEventListener("click", ()=>{
-    document.getElementById("onePage").style.display="none";
-    document.getElementById("secondPage").style.display="none";
-    document.getElementById("threePage").style.display="none";
-    document.getElementById("fourPage").style.display="block";
+const show4Page = document.querySelector("#stadist")
+show4Page.addEventListener("click", () => {
+    document.getElementById("onePage").style.display = "none";
+    document.getElementById("secondPage").style.display = "none";
+    document.getElementById("threePage").style.display = "none";
+    document.getElementById("fourPage").style.display = "block";
     hiddenFotter.classList.remove("hidden");
     hiddenNav.classList.remove("hidden");
     /* hiddenFourPage.classList.remove("hidden"); */
 });
+
 // ---- ---- Variables para el carousel -------------------------------- ----
 const fila = document.querySelector('.contenedor-carousel');
-const peliculas = document.querySelectorAll('.pelicula');
 
 const flechaIzquierda = document.getElementById('flecha-izquierda');
 const flechaDerecha = document.getElementById('flecha-derecha');
@@ -79,8 +82,23 @@ flechaIzquierda.addEventListener('click', () => {
 
 });
 
+// ---- ---- Llamado del array para las imágenes en el carousel---- ----
+const carousel = document.querySelector("#carousel");
+const films = data.films
+for (let i = 0; i < films.length; i++) {
+    const list = `
+    <div class="pelicula">
+    <a href="#">
+    <img src="${films[i].poster}" alt="">
+    </a>
+    </div>`;
+    carousel.insertAdjacentHTML("beforeend", list);
+}
+
 // ---- ---- Paginación ---- ----
+const peliculas = document.querySelectorAll('.pelicula');
 const numeroPaginas = Math.ceil(peliculas.length / 5);
+
 for (let i = 0; i < numeroPaginas; i++) {
     const indicador = document.createElement('button');
 
@@ -97,32 +115,51 @@ for (let i = 0; i < numeroPaginas; i++) {
     });
 }
 
-// ---- ---- Llamado del array para las imágenes y Movies---- ----
-const carousel = document.querySelector("#carousel");
-const films = data.films
-for (let i = 0; i < films.length; i++) {
-    const list = `
-    <div class="pelicula">
-    <a href="#">
-    <img src="${films[i].poster}" alt="">
-    </a>
-    </div>`;
-    carousel.insertAdjacentHTML("beforeend", list);
-}
-
 // ---- ---- Llamado del array para las imágenes de Movies ---- ----
 const moviesGrid = document.querySelector("#movies-grid");
 for (let i = 0; i < films.length; i++) {
     const list = `
     <a href="#">
     <img src="${films[i].poster}" alt="">
-    </a>`;
+    </a>
+    <label>${films[i].title}</label>`;
     moviesGrid.insertAdjacentHTML("beforeend", list);
 }
 
-//---- ---- Darle funcionalidad al search-------------
-/* const SearchText = document.querySelector("#word_search");
-const buttonSearch = document.querySelector("#button_search"); */
+// ---- ---- Acceder a los directores ---- ----
+const directors = document.querySelector("#filterDirector");
+const a = new Set();
+data.films.forEach(x =>{
+a.add(x.director);
+});
+
+const limpia = [...a];
+
+for (let i = 0; i < limpia.length; i++) {
+    const list = `
+    <option value="${limpia[i]}">${limpia[i]}</option>`;
+    directors.insertAdjacentHTML("beforeend", list);
+}
+
+
+
+
+// ---- ---- Acceder a los productores ---- ----
+const producers = document.querySelector("#filterProducer");
+for (let i = 0; i < films.length; i++) {
+    const list = `
+    <option value="${films[i].producer}">${films[i].producer}</option>`;
+    producers.insertAdjacentHTML("beforeend", list);
+}
+
+
+
+
+
+
+
+
+
 
 //const films = data.films--es como productos
 

@@ -32,92 +32,115 @@
     </div>
     </div><br>
 
-  <div class="history">
-    <h3><b>History</b></h3><br><br>
-    <p>Studio Ghibli (スタジオジブリ Sutajio Jiburi?) es un estudio japonés de animación, considerado por la crítica
-      especializada y muchos cinéfilos como uno de los mejores estudios de animación del mundo en la actualidad.​</p>
-    <p>El estudio es mejor conocido por sus largometrajes animados y también ha producido varios cortometrajes,
-      comerciales de televisión y una película para televisión. Fue fundado el 15 de junio de 1985 por los directores
-      Hayao Miyazaki e Isao Takahata y el productor Toshio Suzuki, después del éxito de la película de anime de Topcraft
-      Nausicaä del Valle del Viento (1984). Studio Ghibli también ha colaborado con estudios de videojuegos en el
-      desarrollo visual de varios videojuegos.</p>
-  </div><br><br><br><br><br>
+    <div class="history">
+      <h3><b>History</b></h3><br><br>
+      <p>Studio Ghibli (スタジオジブリ Sutajio Jiburi?) es un estudio japonés de animación, considerado por la crítica
+        especializada y muchos cinéfilos como uno de los mejores estudios de animación del mundo en la actualidad.​</p>
+      <p>El estudio es mejor conocido por sus largometrajes animados y también ha producido varios cortometrajes,
+        comerciales de televisión y una película para televisión. Fue fundado el 15 de junio de 1985 por los directores
+        Hayao Miyazaki e Isao Takahata y el productor Toshio Suzuki, después del éxito de la película de anime de
+        Topcraft
+        Nausicaä del Valle del Viento (1984). Studio Ghibli también ha colaborado con estudios de videojuegos en el
+        desarrollo visual de varios videojuegos.</p>
+    </div><br><br><br><br><br>
 
 
-  <div class="peliculas-recomendadas contenedor">
-    <div class="contenedor-titulo-controles">
-      <h3>Movies</h3>
-      <div class="indicadores"></div>
-    </div>
-
-    <div class="contenedor-principal">
-      <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-
-      <div class="contenedor-carousel">
-        <div class="carousel" id="carousel"> <!-- Modifiqué aquí -->
-          <!-- <div class="pelicula">
-            <a href="#"><img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg" alt=""></a>
-          </div>-->
-
-        </div>
+    <div class="peliculas-recomendadas contenedor">
+      <div class="contenedor-titulo-controles">
+        <h3>Movies</h3>
+        <div class="indicadores"></div>
       </div>
 
-      <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+      <div class="contenedor-principal">
+        <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+        <div class="contenedor-carousel">
+          <div class="carousel" id="carousel">
+          </div>
+        </div>
+
+        <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<section id="secondPage">
-      <h3>Filters by:</h3>
-      <div class="filters-box"></div>
-      <div class="movies" id="movies-grid"></div>
-</section>
+  <section id="secondPage">
+    <h3>Filters by:</h3>
+    <div class="filters-box">
 
-<section id="threePage">
-  <div class="Page3">
-    <h2 class="h2Page3"><a><b>MOVIE</b></a></h2>
-    <ul class="listSearchMovie">
-      <img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg" alt="" class="img_listSearchMovie">
-      <li><a>Descripción de la pelicula</a></li>
-    </ul>
-  </div>  <!-- Esto se ñadirá con la data en main -->
-  <div class="Page3">
-    <h2 class="h2Page3"><a><b>PERSONAJES</b></a></h2>
-    <ul class="listSearch">
-      <li>
-        <div><img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg" alt="Me gusta tu caracter"></div>
-        <div><a>Descripción</a></div>
-      </li>
-      <li>
-        <div><img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg" alt="Me gusta tu caracter"></div>
-        <div><a>Descripción</a></div>
-      </li>
-    </ul>
-  </div>
-  <div class="Page3">
-    <h2 class="h2Page3"><a><b>LOCACIONES</b></a></h2>
-    <ul class="listSearch">
-      <li>
-        <div><img src="" alt=""></div>
-        <div><a>Descripción</a></div>
-      </li>
-    </ul>
-  </div>
-  <div class="Page3">
-    <h2 class="h2Page3"><a><b>VEHICULOS</b></a></h2>
-    <ul class="listSearch">
-      <li>
-        <div><img src="" alt=""></div>
-        <div><a>Descripción</a></div>
-      </li>
-    </ul>
-  </div>
-</section>
+      <div id="sectionFilterDirector" class="filter_1">
+        <select id="filterDirector" class="filterDesign">
+          <option value="" disabled selected>Directors</option>
+        </select>
+      </div>
 
-<section id="fourPage">
-  <div><a>LACHIMULALALA</a></div>
-</section>
+      <div id="sectionFilterProducer" class="filter_1">
+        <select id="filterProducer" class="filterDesign">
+          <option value="" disabled selected>Producers</option>
+        </select>
+      </div>
+
+      <div id="sectionOrder" class="filter_3">
+        <select id="filterByOrder" class="filterDesign">
+          <option value="" disabled selected>Order by</option>
+          <option value="title">A - Z</option>
+          <option value="titleDescending">Z - A</option>
+        </select>
+      </div>
+
+    </div>
+    <div class="movies" id="movies-grid"></div>
+  </section>
+
+
+  <section id="threePage">
+    <div class="Page3">
+      <h2 class="h2Page3"><a><b>MOVIE</b></a></h2>
+      <ul class="listSearchMovie">
+        <img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg" alt=""
+          class="img_listSearchMovie">
+        <li><a>Descripción de la pelicula</a></li>
+      </ul>
+    </div> <!-- Esto se añadirá con la data en main -->
+    <div class="Page3">
+      <h2 class="h2Page3"><a><b>PERSONAJES</b></a></h2>
+      <ul class="listSearch">
+        <li>
+          <div><img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg"
+              alt="Me gusta tu caracter"></div>
+          <div><a>Descripción</a></div>
+        </li>
+        <li>
+          <div><img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg"
+              alt="Me gusta tu caracter"></div>
+          <div><a>Descripción</a></div>
+        </li>
+      </ul>
+    </div>
+    <div class="Page3">
+      <h2 class="h2Page3"><a><b>LOCACIONES</b></a></h2>
+      <ul class="listSearch">
+        <li>
+          <div><img src="" alt=""></div>
+          <div><a>Descripción</a></div>
+        </li>
+      </ul>
+    </div>
+    <div class="Page3">
+      <h2 class="h2Page3"><a><b>VEHICULOS</b></a></h2>
+      <ul class="listSearch">
+        <li>
+          <div><img src="" alt=""></div>
+          <div><a>Descripción</a></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="fourPage">
+    <div><a>LACHIMULALALA</a></div>
+  </section>
 
   <footer id="footer">
     <spam>
