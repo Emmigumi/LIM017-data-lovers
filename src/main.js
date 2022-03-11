@@ -113,17 +113,39 @@ for (let i = 0; i < films.length; i++) {
 // ---- ---- Llamado del array para las imágenes de Movies ---- ----
 const moviesGrid = document.querySelector("#movies-grid");
 for (let i = 0; i < films.length; i++) {
-    const list = `   
+    const list = `
     <a href="#">
     <img src="${films[i].poster}" alt="">
     </a>`;
     moviesGrid.insertAdjacentHTML("beforeend", list);
 }
 
+//---- ---- Darle funcionalidad al search-------------
+/* const SearchText = document.querySelector("#word_search");
+const buttonSearch = document.querySelector("#button_search"); */
 
-{/* console.log(dataLovers.filterData(),data);
+//const films = data.films--es como productos
+
+/* const filterSearchAll = ()=>{ */
+  /*   console.log(SearchText.value); */
+/*   const textInput= SearchText.value.toLowerCase();
+  for(let word_found of films){
+      let tittlesFound = word_found.title.toLowerCase();
+      let peopleFound = word_found.people.toLowerCase();
+  }
+} */
+
+/* buttonSearch.addEventListener("click", filterSearchAll)
+ */
+
+
+
+
+
+
+/* console.log(dataLovers.filterData(),data);
 console.log(dataLovers.sortData());
-console.log(dataLovers.computeStats()); */}
+console.log(dataLovers.computeStats()); */
 
 //Esto nos permite insertar información directa, manteniendo la semántica requerida en html, desde la data ghibli.
 // Permitiendonos mostrarlo en la interfaz.
