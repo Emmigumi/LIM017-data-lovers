@@ -96,8 +96,8 @@ for (let i = 0; i < numeroPaginas; i++) {
     });
 }
 
-// ---- ---- Llamado del array para las imágenes ---- ----
-const carrusel = document.querySelector("#carrusel");
+// ---- ---- Llamado del array para las imágenes y Movies---- ----
+const carousel = document.querySelector("#carousel");
 const films = data.films
 for (let i = 0; i < films.length; i++) {
     const list = `
@@ -106,7 +106,17 @@ for (let i = 0; i < films.length; i++) {
     <img src="${films[i].poster}" alt="">
     </a>
     </div>`;
-    carrusel.insertAdjacentHTML("beforeend", list);
+    carousel.insertAdjacentHTML("beforeend", list);
+}
+
+// ---- ---- Llamado del array para las imágenes de Movies ---- ----
+const moviesGrid = document.querySelector("#movies-grid");
+for (let i = 0; i < films.length; i++) {
+    const list = `   
+    <a href="#">
+    <img src="${films[i].poster}" alt="">
+    </a>`;
+    moviesGrid.insertAdjacentHTML("beforeend", list);
 }
 
 

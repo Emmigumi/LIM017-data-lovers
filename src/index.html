@@ -23,7 +23,7 @@
     <div class="img"><img src="images/carrusel_1.jpg" alt=""></div>
     <div class="form">
       <label>Search for</label>
-      <input type="text" name="text" placeholder="  Search by keyword" id="text">
+      <input type="search" name="text" placeholder="  Search by keyword" id="text">
       <button class="search-button">Search</button>
     </div>
     </div><br>
@@ -50,7 +50,7 @@
       <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
 
       <div class="contenedor-carousel">
-        <div class="carousel" id="carrusel"> <!-- Modifiqué aquí -->
+        <div class="carousel" id="carousel"> <!-- Modifiqué aquí -->
           <!-- <div class="pelicula">
             <a href="#"><img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg" alt=""></a>
           </div>-->
@@ -63,16 +63,12 @@
   </div>
 </section>
 
-<main id="secondPage">
-    <titlte>MOVIE</titlte>
-    <ul id="AllMovie">
-    <li><img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg" alt=""></li>
-    </ul>
-  <div id="AllPeople"></div>
-  <div id="Locations"></div>
-  <div id="Vehicles"></div>
-  </div>
-  </main>
+
+<section id="secondPage">
+      <h3>Filters by:</h3>
+      <div class="filters-box"></div>
+      <div class="movies" id="movies-grid"></div>
+</section>
 
 <section id="threePage">
   <div class="Page3">
