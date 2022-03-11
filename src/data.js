@@ -12,3 +12,14 @@ return "Rayus";
 //};
 
 //export default dataLovers;
+
+  export const filterDataDirector = (filterDirector) => {
+    const resultByDirector = data.films.filter(y => y.director === filterDirector);
+    console.log('resultByDirector',resultByDirector);
+    return resultByDirector;
+  };
+
+  export const filterDataProducer = (data, filterProducer) => {
+    const resultByProducer = data.filter(y => y.producer === filterProducer);
+    return resultByProducer;
+  };

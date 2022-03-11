@@ -226,8 +226,8 @@ transition: .2s ease all;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
 }
 
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover{
-    transform: scale(1.2);
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula:hover{
+    transform: scale(1.1);
     transform-origin: center;
 }
 
