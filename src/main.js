@@ -152,28 +152,28 @@ for (let i = 0; i < films.length; i++) {
     producers.insertAdjacentHTML("beforeend", list);
 }
 
-
-
-
-
-
-
-
-
-
+//--------Dar uso a Search--------------------------------
+const inputSearch = document.querySelector("#word_search");
+const panelOptions = document.querySelector(".autocom-box");
 //const films = data.films--es como productos
 
-/* const filterSearchAll = ()=>{ */
-  /*   console.log(SearchText.value); */
-/*   const textInput= SearchText.value.toLowerCase();
-  for(let word_found of films){
-      let tittlesFound = word_found.title.toLowerCase();
-      let peopleFound = word_found.people.toLowerCase();
+inputSearch.addEventListener('keyup', function() {
+  const input = inputSearch.value;
+  panelOptions.innerHTML = '';
+  const autocom_box = films.filter(function(array) {
+    return array.title.toLowerCase().startsWith(input);
+  });
+ autocom_box.forEach(function(suggested) {
+    const div = document.createElement('div');
+    div.innerHTML = suggested.title;
+    panelOptions.appendChild(div);
+  });
+  if (input === '') {
+    panelOptions.innerHTML = '';
   }
-} */
+})
 
-/* buttonSearch.addEventListener("click", filterSearchAll)
- */
+
 
 
 
