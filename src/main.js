@@ -133,50 +133,22 @@ data.films.forEach(x =>{
 a.add(x.director);
 });
 
-const dataNuevaD = [...a];
+const limpia = [...a];
 
-for (let i = 0; i < dataNuevaD.length; i++) {
+for (let i = 0; i < limpia.length; i++) {
     const list = `
-    <option value="${dataNuevaD[i]}">${dataNuevaD[i]}</option>`;
+    <option value="${limpia[i]}">${limpia[i]}</option>`;
     directors.insertAdjacentHTML("beforeend", list);
 }
 
-
 // ---- ---- Acceder a los productores ---- ----
 const producers = document.querySelector("#filterProducer");
-const b = new Set();
-data.films.forEach(x =>{
-b.add(x.director);
-});
-
-const dataNuevaP = [...b];
-
-for (let i = 0; i < dataNuevaP.length; i++) {
+for (let i = 0; i < films.length; i++) {
     const list = `
-    <option value="${dataNuevaP[i]}">${dataNuevaP[i]}</option>`;
+    <option value="${films[i].producer}">${films[i].producer}</option>`;
     producers.insertAdjacentHTML("beforeend", list);
 }
 
-//--------Dar uso a Search--------------------------------
-const inputSearch = document.querySelector("#word_search");
-const panelOptions = document.querySelector(".autocom-box");
-//const films = data.films--es como productos
-
-inputSearch.addEventListener('keyup', function() {
-  const input = inputSearch.value;
-  panelOptions.innerHTML = '';
-  const autocom_box = films.filter(function(array) {
-    return array.title.toLowerCase().startsWith(input);
-  });
- autocom_box.forEach(function(suggested) {
-    const div = document.createElement('div');
-    div.innerHTML = suggested.title;
-    panelOptions.appendChild(div);
-  });
-  if (input === '') {
-    panelOptions.innerHTML = '';
-  }
-})
 
 
 
