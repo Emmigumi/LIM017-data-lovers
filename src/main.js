@@ -133,25 +133,29 @@ data.films.forEach(x =>{
 a.add(x.director);
 });
 
-const limpia = [...a];
+const dataNuevaD = [...a];
 
-for (let i = 0; i < limpia.length; i++) {
+for (let i = 0; i < dataNuevaD.length; i++) {
     const list = `
-    <option value="${limpia[i]}">${limpia[i]}</option>`;
+    <option value="${dataNuevaD[i]}">${dataNuevaD[i]}</option>`;
     directors.insertAdjacentHTML("beforeend", list);
 }
 
 
-
-
 // ---- ---- Acceder a los productores ---- ----
 const producers = document.querySelector("#filterProducer");
-for (let i = 0; i < films.length; i++) {
+const b = new Set();
+data.films.forEach(x =>{
+b.add(x.director);
+});
+
+const dataNuevaP = [...b];
+
+for (let i = 0; i < dataNuevaP.length; i++) {
     const list = `
-    <option value="${films[i].producer}">${films[i].producer}</option>`;
+    <option value="${dataNuevaP[i]}">${dataNuevaP[i]}</option>`;
     producers.insertAdjacentHTML("beforeend", list);
 }
-
 
 
 
