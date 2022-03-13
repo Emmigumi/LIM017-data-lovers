@@ -111,13 +111,15 @@ span{
     text-align: center;
     color:aliceblue;
 }
-#text{
-width:497px;
-height: 40px;
-margin: auto;
-border-radius:8px;
+/* #word_search{ */
+/* ajuste al ancho del cuadro de sugerencias */
+/* width:100%;
+height: 100%; */
+/* -------------------- */
+/* margin: auto; */
+/* border-radius:8px;
 border:none;
-}
+} */
 .form button{
     width:99px;
     height: 40px;
@@ -323,6 +325,44 @@ box-shadow: 4px 4px 8px gray;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 15px;
 }
+/* -------cuadro de sugerencias------- */
+.search-input {
+    width: 60%;
+    background:#fff;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #EC255A;
+  }
+  .search-input input{
+    /* ajuste al ancho del cuadro de sugerencias */
+    width:100%;
+    height: 100%;
+    padding: 0 8%;
+    font-size: 20px;
+    border-radius:8px;
+    border:none;
+    color:#EC255A;
+    border: none;
+    }
+
+  .autocom-box {
+    border-top: 2px;
+    background-color:#fff;
+    color:#EC255A;
+    display:flex;
+    align-items:flex;
+    justify-content: center;
+  }
+  .autocom-box div {
+    font-size: 12px;
+    color:#161853;
+    cursor: pointer;
+    text-align: center;
+    margin:auto;
+  }
+  .autocom-box div:hover {
+    background-color:#f191aa;
+  }
 
 footer{
     background-color: #161853;

@@ -15,7 +15,7 @@ return "Rayus";
 
   export const filterDataDirector = (filterDirector) => {
     const resultByDirector = data.films.filter(y => y.director === filterDirector);
-    console.log('resultByDirector',resultByDirector);
+    //console.log('resultByDirector',resultByDirector);
     return resultByDirector;
   };
 
@@ -23,3 +23,4 @@ return "Rayus";
     const resultByProducer = data.filter(y => y.producer === filterProducer);
     return resultByProducer;
   };
+  

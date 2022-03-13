@@ -118,7 +118,7 @@ for (let i = 0; i < numeroPaginas; i++) {
 // ---- ---- Llamado del array para las imágenes de Movies ---- ----
 const moviesGrid = document.querySelector("#movies-grid");
 for (let i = 0; i < films.length; i++) {
-    const list = `   
+    const list = `
     <a href="#">
     <img src="${films[i].poster}" alt="">
     </a>
@@ -157,6 +157,26 @@ for (let i = 0; i < dataNuevaP.length; i++) {
     producers.insertAdjacentHTML("beforeend", list);
 }
 
+//--------Dar uso a Search--------------------------------
+const inputSearch = document.querySelector("#word_search");
+const panelOptions = document.querySelector(".autocom-box");
+//const films = data.films--es como productos
+
+inputSearch.addEventListener('keyup', function() {
+  const input = inputSearch.value;
+  panelOptions.innerHTML = '';
+  const autocom_box = films.filter(function(array) {
+    return array.title.toLowerCase().startsWith(input);
+  });
+ autocom_box.forEach(function(suggested) {
+    const div = document.createElement('div');
+    div.innerHTML = suggested.title;
+    panelOptions.appendChild(div);
+  });
+  if (input === '') {
+    panelOptions.innerHTML = '';
+  }
+})
 
 
 
@@ -165,9 +185,10 @@ for (let i = 0; i < dataNuevaP.length; i++) {
 
 
 
-{/* console.log(dataLovers.filterData(),data);
+
+/* console.log(dataLovers.filterData(),data);
 console.log(dataLovers.sortData());
-console.log(dataLovers.computeStats()); */}
+console.log(dataLovers.computeStats()); */
 
 //Esto nos permite insertar información directa, manteniendo la semántica requerida en html, desde la data ghibli.
 // Permitiendonos mostrarlo en la interfaz.
