@@ -1,6 +1,6 @@
-import * as dataLovers from './data.js';
+//import * as dataLovers from './data.js';
 
-/* import {filterDataDirector,filterDataProducer} from "./data.js"; */
+ import {filterDataDirector,filterDataProducer} from "./data.js";
 
 //--------MOSTRAR Y OCULTAR--------
 import data from './data/ghibli/ghibli.js';
@@ -135,13 +135,31 @@ data.films.forEach(x =>{
 a.add(x.director);
 });
 
-const limpia = [...a];
+const DataClean = [...a];
 
-for (let i = 0; i < limpia.length; i++) {
+for (let i = 0; i < DataClean.length; i++) {
     const list = `
-    <option value="${limpia[i]}">${limpia[i]}</option>`;
+    <option value="${DataClean[i]}" class="opcionDirectors">${DataClean[i]}</option>`;
     directors.insertAdjacentHTML("beforeend", list);
 }
+directors.addEventListener('change', (e) => {
+    const ResultD = filterDataDirector(e.target.value);
+
+})
+// 1.Identificar el id del director (el id que selecciona el usuario)
+//2.Me reconozca o relacione ese id con las movies
+//3. Filtrar(usar la funcion filtrarData...)
+// const x= document.getElementsByClassName("opcionDirectors")
+// for(let i = 0; i < x.length; i++){
+//     x.addEventListener("click", function(){
+        
+//         return (x[i]);
+        
+//     })
+//     console.log("return");
+// }
+//console.log("return");
+
 
 // ---- ---- Acceder a los productores ---- ----
 const producers = document.querySelector("#filterProducer");
