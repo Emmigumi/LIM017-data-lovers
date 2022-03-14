@@ -2,7 +2,7 @@ import * as dataLovers from './data.js';
 
 /* import {filterDataDirector,filterDataProducer} from "./data.js"; */
 
-//MOSTRAR Y OCULTAR
+//--------MOSTRAR Y OCULTAR--------
 import data from './data/ghibli/ghibli.js';
 
 const hiddenNav = document.getElementById("Menu");
@@ -11,20 +11,20 @@ hiddenNav.classList.add("hidden");
 const hiddenFotter = document.getElementById("footer");
 hiddenFotter.classList.add("hidden");
 
-const showListMovie = document.getElementById("ListMovies")
-showListMovie.addEventListener("click", () => {
-    document.getElementById("onePage").style.display = "none";
-    document.getElementById("secondPage").style.display = "block";
+const showInicio = document.getElementById("inicio")
+showInicio.addEventListener("click", () => {
+    document.getElementById("onePage").style.display = "block";
+    document.getElementById("secondPage").style.display = "none";
     document.getElementById("threePage").style.display = "none";
     document.getElementById("fourPage").style.display = "none";
     hiddenFotter.classList.remove("hidden");
     hiddenNav.classList.remove("hidden");
 });
 
-const showInicio = document.getElementById("inicio")
-showInicio.addEventListener("click", () => {
-    document.getElementById("onePage").style.display = "block";
-    document.getElementById("secondPage").style.display = "none";
+const showListMovie = document.getElementById("ListMovies")
+showListMovie.addEventListener("click", () => {
+    document.getElementById("onePage").style.display = "none";
+    document.getElementById("secondPage").style.display = "block";
     document.getElementById("threePage").style.display = "none";
     document.getElementById("fourPage").style.display = "none";
     hiddenFotter.classList.remove("hidden");
@@ -49,8 +49,11 @@ show4Page.addEventListener("click", () => {
     document.getElementById("fourPage").style.display = "block";
     hiddenFotter.classList.remove("hidden");
     hiddenNav.classList.remove("hidden");
-    /* hiddenFourPage.classList.remove("hidden"); */
 });
+
+//--------Dar uso a Search--------------------------------
+
+
 
 // ---- ---- Variables para el carousel -------------------------------- ----
 const fila = document.querySelector('.contenedor-carousel');
@@ -67,7 +70,6 @@ flechaDerecha.addEventListener('click', () => {
         indicadorActivo.nextSibling.classList.add('activo');
         indicadorActivo.classList.remove('activo');
     }
-
 });
 
 // ---- ---- Event Listener para la flecha izquierda ---- ----
@@ -149,15 +151,6 @@ for (let i = 0; i < films.length; i++) {
     producers.insertAdjacentHTML("beforeend", list);
 }
 
-
-
-
-
-
-
-
-
-
 /* console.log(dataLovers.filterData(),data);
 console.log(dataLovers.sortData());
 console.log(dataLovers.computeStats()); */
@@ -191,3 +184,4 @@ descriptionAllMovies.insertAdjacentHTML("beforeend", list);
 //ME PERMITE VER EL ARRAY COMPLETO EN CONSOLA
 /* const x= dataLovers.filterData(data, "Castle in the Sky");
 console.log(x); */
+

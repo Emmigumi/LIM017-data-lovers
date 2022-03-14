@@ -1,7 +1,4 @@
-/* export function filterData (data, movies){
-const allMovies = data.films.filter(itemOfmovies => itemOfmovies.title===movies);
-return allMovies;
-}
+import data from './data/ghibli/ghibli.js'
 
 /* export function sortData (data, sortBy, sortOrder){
 return "mam";
@@ -11,13 +8,12 @@ return "Rayus";
 }  */
 //};
 
-import data from './data/ghibli/ghibli.js'
-
   export const filterDataDirector = (filterDirector) => { 
     const resultDirector = data.films.filter(y => y.director === filterDirector);
     return resultDirector;
   };
   console.log(filterDataDirector('Hayao Miyazaki'));
+
 
   export const filterDataProducer = (filterProducer) => {
     const resultProducer = data.films.filter(y => y.producer === filterProducer);
