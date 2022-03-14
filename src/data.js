@@ -25,6 +25,35 @@ import data from './data/ghibli/ghibli.js'
   };
   console.log(filterDataProducer("Isao Takahata"));
   
+//-----------Obtener new array People--------------------------------
+  const NewArrayPeople= [];
+
+for(let i=0; i<data.films.length; i++){
+  //console.log(data.films[i].people);
+  for(let j=0; j<data.films[i].people.length; j++){
+    console.log([i]);
+    if(j===23){
+      console.log('x');
+      console.log(data.films[j]);
+    }
+   // console.log(data.films[j]);//Para conocer al elemento
+    NewArrayPeople.push(data.films[i].people[j]);
+  }
+  
+} 
+console.log(NewArrayPeople);
+
+const NewArrayPeople2= [];
+data.films.forEach((pelicula)=>{
+  pelicula.people.forEach((personajes)=>{
+    NewArrayPeople2.push(personajes);
+  })
+});
+console.log(NewArrayPeople2);
+
+
+
+
 
 
 
