@@ -135,26 +135,53 @@ data.films.forEach(x =>{
 a.add(x.director);
 });
 
-const dataNuevaD = [...a];
+const limpia = [...a];
 
-for (let i = 0; i < dataNuevaD.length; i++) {
+for (let i = 0; i < limpia.length; i++) {
     const list = `
-    <option value="${dataNuevaD[i]}">${dataNuevaD[i]}</option>`;
+    <option value="${limpia[i]}">${limpia[i]}</option>`;
     directors.insertAdjacentHTML("beforeend", list);
 }
 
 // ---- ---- Acceder a los productores ---- ----
 const producers = document.querySelector("#filterProducer");
-const b = new Set();
-data.films.forEach(x =>{
-b.add(x.director);
-});
-
-const dataNuevaP = [...b];
-
-for (let i = 0; i < dataNuevaP.length; i++) {
+for (let i = 0; i < films.length; i++) {
     const list = `
-    <option value="${dataNuevaP[i]}">${dataNuevaP[i]}</option>`;
+    <option value="${films[i].producer}">${films[i].producer}</option>`;
     producers.insertAdjacentHTML("beforeend", list);
 }
+
+/* console.log(dataLovers.filterData(),data);
+console.log(dataLovers.sortData());
+console.log(dataLovers.computeStats()); */
+
+//Esto nos permite insertar información directa, manteniendo la semántica requerida en html, desde la data ghibli.
+// Permitiendonos mostrarlo en la interfaz.
+
+//-----Muestra la descripción de las movies------
+/* const descriptionAllMovies=document.querySelector("#AllMovie");
+//const films = data.films
+
+for (let i=0; i<films.length; i++) {
+    const list = `
+    <li><img src="${films[i].poster}" alt=""></li>
+    <li>"${films[i].title}"</li>
+    <li>"${films[i].description}"</li>
+    <li>"${films[i].director}"</li>
+    <li>"${films[i].producer}"</li>
+    <li>"${films[i].release_date}"</li>
+    <li>"${films[i].rt_score}"</li>`;
+descriptionAllMovies.insertAdjacentHTML("beforeend", list);
+} */
+
+//-----funcionalidad al search-------------
+/*  function filterItems(query) {
+    return data.filter(function(el) {
+        return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
+    })
+} */
+
+//ME PERMITE VER EL ARRAY COMPLETO EN CONSOLA
+/* const x= dataLovers.filterData(data, "Castle in the Sky");
+console.log(x); */
 
