@@ -1,6 +1,6 @@
 //import * as dataLovers from './data.js';
 
- import {filterDataDirector,filterDataProducer} from "./data.js";
+import { filterDataDirector, filterDataProducer } from "./data.js";
 
 //--------MOSTRAR Y OCULTAR--------
 import data from './data/ghibli/ghibli.js';
@@ -121,53 +121,74 @@ for (let i = 0; i < numeroPaginas; i++) {
 const moviesGrid = document.querySelector("#movies-grid");
 for (let i = 0; i < films.length; i++) {
     const list = `
+    <div>
     <a href="#">
     <img src="${films[i].poster}" alt="">
     </a>
-    <label>${films[i].title}</label>`;
+    <label>${films[i].title}</label>
+    </div>`;
     moviesGrid.insertAdjacentHTML("beforeend", list);
 }
 
+function filmsMoviesBy(films) {
+    moviesGrid.innerHTML = "";
+    for (let i = 0; i < films.length; i++) {
+        const list2 = `
+        <div>
+        <a href="#">
+        <img src="${films[i].poster}" alt="">
+        </a>
+        <label>${films[i].title}</label>
+        </div>`;
+        moviesGrid.insertAdjacentHTML("beforeend", list2);
+    }
+}
+
+
+
+
+
 // ---- ---- Acceder a los directores ---- ----
 const directors = document.querySelector("#filterDirector");
-const a = new Set();
-data.films.forEach(x =>{
-a.add(x.director);
+const a = new Set([]);
+data.films.forEach(x => {
+    a.add(x.director);
 });
 
 const DataClean = [...a];
 
 for (let i = 0; i < DataClean.length; i++) {
     const list = `
-    <option value="${DataClean[i]}" class="opcionDirectors">${DataClean[i]}</option>`;
+    <option value="${DataClean[i]}">${DataClean[i]}</option>`;
     directors.insertAdjacentHTML("beforeend", list);
 }
 directors.addEventListener('change', (e) => {
-    const ResultD = filterDataDirector(e.target.value);
-
+    const selectedDirector = filterDataDirector(e.target.value);
+    filmsMoviesBy(selectedDirector);
+    moviesGrid.insertAdjacentHTML("beforeend", selectedDirector);
 })
-// 1.Identificar el id del director (el id que selecciona el usuario)
-//2.Me reconozca o relacione ese id con las movies
-//3. Filtrar(usar la funcion filtrarData...)
-// const x= document.getElementsByClassName("opcionDirectors")
-// for(let i = 0; i < x.length; i++){
-//     x.addEventListener("click", function(){
-        
-//         return (x[i]);
-        
-//     })
-//     console.log("return");
-// }
-//console.log("return");
-
 
 // ---- ---- Acceder a los productores ---- ----
 const producers = document.querySelector("#filterProducer");
-for (let i = 0; i < films.length; i++) {
+const b = new Set([]);
+data.films.forEach(x => {
+    b.add(x.producer);
+});
+
+const DataClean2 = [...b];
+
+for (let i = 0; i < DataClean2.length; i++) {
     const list = `
-    <option value="${films[i].producer}">${films[i].producer}</option>`;
+    <option value="${DataClean2[i]}">${DataClean2[i]}</option>`;
     producers.insertAdjacentHTML("beforeend", list);
 }
+producers.addEventListener('change', (e) => {
+    const selectedProducer = filterDataProducer(e.target.value);
+    filmsMoviesBy(selectedProducer);
+    moviesGrid.insertAdjacentHTML("beforeend", selectedProducer);
+})
+
+
 
 /* console.log(dataLovers.filterData(),data);
 console.log(dataLovers.sortData());
@@ -202,4 +223,3 @@ descriptionAllMovies.insertAdjacentHTML("beforeend", list);
 //ME PERMITE VER EL ARRAY COMPLETO EN CONSOLA
 /* const x= dataLovers.filterData(data, "Castle in the Sky");
 console.log(x); */
-
