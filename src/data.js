@@ -13,24 +13,24 @@ return "Rayus";
     const resultDirector = data.films.filter(y => y.director === nameDirector);
     return resultDirector;
   };
-  console.log(filterDataDirector('Hayao Miyazaki'));
+  /* console.log(filterDataDirector('Hayao Miyazaki')); */
 
 //-----------Lógica de filtro para productores--------------------------------
   export const filterDataProducer = (filterProducer) => {
     const resultProducer = data.films.filter(y => y.producer === filterProducer);
     return resultProducer;
   };
-  console.log(filterDataProducer("Isao Takahata"));
+  /* console.log(filterDataProducer("Isao Takahata")); */
 
     //-------------Usando Sort(), según el score-------------
     let compareNumeric = (a, b) => {
-      if (a.rt_score > b.rt_score){
+      if (a.release_date > b.release_date){
         return 1;
       }
-      else if (a.rt_score === '100'){
+      else if (a.release_date === '100'){
   return 1;
       }
-      else if (b.rt_score==='100'){
+      else if (b.release_date==='100'){
         return 1;
       }
       else{return -1;}
@@ -40,7 +40,7 @@ return "Rayus";
       const resultSor= data.films.sort(compareNumeric);
       return resultSor;
     }
-    console.log(ordenAscendente());
+   /*  console.log(ordenAscendente()); */
 
     
 //-----------Obtener new array People--------------------------------
@@ -60,7 +60,7 @@ for(let i=0; i<data.films.length; i++){
   }
 
 }
-console.log(NewArrayPeople);
+/* console.log(NewArrayPeople); */
 
 const NewArrayPeople2= [];
 data.films.forEach((pelicula)=>{
@@ -68,4 +68,4 @@ data.films.forEach((pelicula)=>{
     NewArrayPeople2.push(personajes);
   })
 });
-console.log(NewArrayPeople2);
+/* console.log(NewArrayPeople2); */
