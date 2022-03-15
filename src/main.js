@@ -192,7 +192,7 @@ const sectionOrderBox= document.getElementById("filterByOrder");
 sectionOrderBox.addEventListener('change', (e) => {
    // console.log("change", e.target.value);
     const orderSelected = sortData(e.target.value, films);
-    console.log(orderSelected);
+    //console.log(orderSelected);
     filmsMoviesBy(orderSelected);
 })
 

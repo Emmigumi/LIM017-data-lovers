@@ -52,12 +52,6 @@ export const sortData = (order, films) => {
   }
 };
 
-/*  export const sortData = ()=>{
-      const resultSor= data.films.sort(compareAscending);
-      return resultSor;
-    } */
-//console.log(sortData ());
-
 //-----------Obtener new array People--------------------------------
 const NewArrayPeople = [];
 
@@ -83,3 +77,5 @@ data.films.forEach((pelicula) => {
   });
 });
 /* console.log(NewArrayPeople2); */
+
+
