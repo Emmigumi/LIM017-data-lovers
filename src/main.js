@@ -1,6 +1,6 @@
 //import * as dataLovers from './data.js';
 
-import { filterDataDirector, filterDataProducer } from "./data.js";
+import { filterDataDirector, filterDataProducer, sortData } from "./data.js";
 
 //--------MOSTRAR Y OCULTAR--------
 import data from './data/ghibli/ghibli.js';
@@ -86,7 +86,7 @@ flechaIzquierda.addEventListener('click', () => {
 
 // ---- ---- Llamado del array para las imágenes en el carousel---- ----
 const carousel = document.querySelector("#carousel");
-const films = data.films
+const films = data.films;
 for (let i = 0; i < films.length; i++) {
     const list = `
     <div class="pelicula">
@@ -187,23 +187,30 @@ producers.addEventListener('change', (e) => {
     filmsMoviesBy(selectedProducer);
     moviesGrid.insertAdjacentHTML("beforeend", selectedProducer);
 })
+//----------Ordenar con la funcion sortData-----------------------------------------
+const sectionOrderBox= document.getElementById("filterByOrder");
+sectionOrderBox.addEventListener('change', (e) => {
+   // console.log("change", e.target.value);
+    const orderSelected = sortData(e.target.value, films);
+    console.log(orderSelected);
+    filmsMoviesBy(orderSelected);
+})
 
 
 
-/* console.log(dataLovers.filterData(),data);
-console.log(dataLovers.sortData());
-console.log(dataLovers.computeStats()); */
+
+
+
 
 //Esto nos permite insertar información directa, manteniendo la semántica requerida en html, desde la data ghibli.
 // Permitiendonos mostrarlo en la interfaz.
 
 //-----Muestra la descripción de las movies------
 /* const descriptionAllMovies=document.querySelector("#AllMovie");
-//const films = data.films
 
 for (let i=0; i<films.length; i++) {
     const list = `
-    <li><img src="${films[i].poster}" alt=""></li>
+ <li><img src="${films[i].poster}" alt=""></li>
     <li>"${films[i].title}"</li>
     <li>"${films[i].description}"</li>
     <li>"${films[i].director}"</li>
