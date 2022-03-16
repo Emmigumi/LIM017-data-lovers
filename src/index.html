@@ -18,49 +18,47 @@
     </ul>
   </nav>
 
-<section id="onePage">
-  <div class="portada">
-    <div class="img"><img src="images/carrusel_1.jpg" alt=""></div>
-    <div class="form">
-      <label>Search for</label>
-      <div class="search-input">
-        <input type="search" name="text" placeholder="  Search by people" id="word_search" class="card-filter" autocomplete="off">
+  <section id="onePage">
+    <div class="portada">
+      <div class="img"><img src="images/carrusel_1.jpg" alt=""></div>
+      <div class="form">
+        <label>Search for</label>
+        <input type="search" name="text" placeholder="  Search by keyword" id="text">
+        <button class="search-button">Search</button>
       </div>
-      <button class="search-button" id="button_search">Search</button>
-    </div>
-  </div>
+      </div><br>
 
-    <div class="history">
-      <h3><b>History</b></h3><br>
-      <p>Studio Ghibli (スタジオジブリ Sutajio Jiburi?) es un estudio japonés de animación, considerado por la crítica
-        especializada y muchos cinéfilos como uno de los mejores estudios de animación del mundo en la actualidad.​</p>
-      <p>El estudio es mejor conocido por sus largometrajes animados y también ha producido varios cortometrajes,
-        comerciales de televisión y una película para televisión. Fue fundado el 15 de junio de 1985 por los directores
-        Hayao Miyazaki e Isao Takahata y el productor Toshio Suzuki, después del éxito de la película de anime de
-        Topcraft
-        Nausicaä del Valle del Viento (1984). Studio Ghibli también ha colaborado con estudios de videojuegos en el
-        desarrollo visual de varios videojuegos.</p>
-    </div>
+      <div class="history">
+        <h3><b>History</b></h3><br><br>
+        <p>Studio Ghibli (スタジオジブリ Sutajio Jiburi?) es un estudio japonés de animación, considerado por la crítica
+          especializada y muchos cinéfilos como uno de los mejores estudios de animación del mundo en la actualidad.​</p>
+        <p>El estudio es mejor conocido por sus largometrajes animados y también ha producido varios cortometrajes,
+          comerciales de televisión y una película para televisión. Fue fundado el 15 de junio de 1985 por los directores
+          Hayao Miyazaki e Isao Takahata y el productor Toshio Suzuki, después del éxito de la película de anime de Topcraft
+          Nausicaä del Valle del Viento (1984). Studio Ghibli también ha colaborado con estudios de videojuegos en el
+          desarrollo visual de varios videojuegos.</p>
+      </div><br><br><br><br><br>
 
 
-    <div class="peliculas-recomendadas">
-      <div class="contenedor-titulo-controles">
-        <h3>Movies</h3>
-        <div class="indicadores"></div>
-      </div>
-
-      <div class="contenedor-principal">
-        <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-
-        <div class="contenedor-carousel">
-          <div class="carousel" id="carousel">
-          </div>
+      <div class="peliculas-recomendadas contenedor">
+        <div class="contenedor-titulo-controles">
+          <h3>Movies</h3>
+          <div class="indicadores"></div>
         </div>
-
-        <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+  
+        <div class="contenedor-principal">
+          <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+  
+          <div class="contenedor-carousel">
+            <div class="carousel" id="carousel">
+            </div>
+          </div>
+  
+          <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+        </div>
       </div>
-    </div>
-  </section>
+      
+    </section>
 
 
   <section id="secondPage">
@@ -70,6 +68,7 @@
       <div id="sectionFilterDirector" class="filter_1">
         <select id="filterDirector" class="filterDesign">
           <option value="" selected>Directors</option>
+        
         </select>
       </div>
 
@@ -86,15 +85,15 @@
           <option value="Des">Descendente</option>
         </select>
       </div>
+
     </div>
-    
     <div class="movies" id="movies-grid"></div>
   </section>
 
 
   <section id="threePage">
     <div class="Page3">
-      <h2 class="titlePage3"><a><b>MOVIE</b></a></h2>
+      <h2 class="h2Page3"><a><b>MOVIE</b></a></h2>
       <ul class="listSearchMovie">
         <img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg" alt=""
           class="img_listSearchMovie">
@@ -102,7 +101,7 @@
       </ul>
     </div> <!-- Esto se añadirá con la data en main -->
     <div class="Page3">
-      <h2 class="titlePage3"><a><b>PERSONAJES</b></a></h2>
+      <h2 class="h2Page3"><a><b>PERSONAJES</b></a></h2>
       <ul class="listSearch">
         <li>
           <div><img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg"
@@ -117,7 +116,7 @@
       </ul>
     </div>
     <div class="Page3">
-      <h2 class="titlePage3"><a><b>LOCACIONES</b></a></h2>
+      <h2 class="h2Page3"><a><b>LOCACIONES</b></a></h2>
       <ul class="listSearch">
         <li>
           <div><img src="" alt=""></div>
@@ -126,7 +125,7 @@
       </ul>
     </div>
     <div class="Page3">
-      <h2 class="titlePage3"><a><b>VEHICULOS</b></a></h2>
+      <h2 class="h2Page3"><a><b>VEHICULOS</b></a></h2>
       <ul class="listSearch">
         <li>
           <div><img src="" alt=""></div>

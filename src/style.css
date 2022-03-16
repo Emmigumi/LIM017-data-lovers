@@ -28,7 +28,7 @@ body {
 .Menu{
     list-style: none;
     background-color: #161853;
-    width: 100%; /* ---*--- */
+    width: 99%;
     height: 138px;
     justify-content: space-between;
     display:flex;
@@ -74,36 +74,29 @@ span{
 .partOfMenu li:hover{
     background: #EC255A;
 }
-/* ---EDICIÓN DE LA PRIMERA PAG--- */
+
 .portada{
-    width: 100%;/* ---*1280px--- */
-    height: 720px;/* ---723*--- */
+    width: 1280px;
+    height: 723px;
     position: relative;
     overflow: hidden;
 }
 
-.img{
-    width: 106%;/* ---*1166px--- */
-    height: 600px; /* ---*600px--- */
-    /* margin-left: 10px;
-    margin-right: 68px; *//* ---*10px 8%--- */
+.portada img{
+    width: 1166px;
+    height: 600px;
+    margin: 10px 8%;
 }
-.img img { /* ---*Incertado recientemente--- */
-    width: 95%;
-    height: 95%;
-    margin-top:10px;
-    padding-right: 20px;
-    padding-left:10px;
-}
-.portada .form{
+
+.form{
     background-color:#161853;
-    width: 84%;/* ---*976px--- */
-    height: 172px;/* ---*--- */
-    margin: 0 8%;
+    width: 976px;
+    height: 172px;
+    margin: 0 152px;
     border-radius:16px;
     border:none;
     position:absolute;
-    top:500px;
+    top:550px;
     display:flex;
     align-items: center;
     box-shadow: 4px 4px 8px gray;
@@ -118,25 +111,15 @@ span{
     text-align: center;
     color:aliceblue;
 }
-/* --------caja contenedora del search------- */
-.search-input {
-    width: 60%;
-    background:#fff;
-    border-radius: 6px;
-    overflow: hidden;
-    border: 1px solid #EC255A;
-  }
-  .search-input input{
-    width:100%;
-    height: 100%;
-    padding: 0 8%;
-    font-size: 20px;
-    border-radius:8px;
-    border:none;
-    color:#EC255A;
-    border: none;
-    }
-
+/* #word_search{ */
+/* ajuste al ancho del cuadro de sugerencias */
+/* width:100%;
+height: 100%; */
+/* -------------------- */
+/* margin: auto; */
+/* border-radius:8px;
+border:none;
+} */
 .form button{
     width:99px;
     height: 40px;
@@ -147,18 +130,16 @@ span{
     border: none;
 }
 .history{
-width:100%;/* ---*972px--- */
-height:300px;  /* ---*--- */
-padding: 0 80px;
+width:972px;
+height:160px;
+margin: 0 152px;
 }
 .history h3{
 color:#EC255A;
-font-size: 25px;
-
+font-size: 15px;
 }
 .history p{
     text-align: justify;
-   
 }
 
 .contenedor{
@@ -171,7 +152,6 @@ font-size: 25px;
     display: flex;
     justify-content: space-between;
     align-items: end;
-    padding: 0 40px;
 }
 
 .contenedor-titulo-controles h3{
@@ -194,14 +174,10 @@ font-size: 25px;
 }
 
 /* ---- ---- ---- Contenedor principal y flechas ---- ---- ---- */
-.peliculas-recomendadas{
-    padding:0 40px;/*  -----*--- */
-}
 .peliculas-recomendadas .contenedor-principal{
     display: flex;
     align-items: center;
     position: relative;
-    padding: 0 35px;
 }
 
 .peliculas-recomendadas .contenedor-principal .flecha-izquierda,
@@ -238,7 +214,7 @@ transition: .2s ease all;
     width: 100%;
     padding: 20px 0;
     overflow: hidden;
-    scroll-behavior: smooth; /*evita que al seleccionar la imagen se desplace de forma delicada hacia arriba*/
+    scroll-behavior: smooth; /*evita que al seleccionar la imagen se desplace de forma brusca hacia arriba*/
 }
 
 .peliculas-recomendadas .contenedor-carousel .carousel{
@@ -260,7 +236,6 @@ transition: .2s ease all;
 .peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
     width: 100%;
     vertical-align: top;
-    height: 300px; /* ---*añadido--- */
 }
 
 /* ---- ---- ---- Media Queries ---- ---- ---- */
@@ -281,6 +256,7 @@ transition: .2s ease all;
         display: none;
     }
 }
+
 /*-------- Maquetado de la tercera pag -----*/
 #threePage{
     display:center;
@@ -291,7 +267,7 @@ transition: .2s ease all;
 width:976px;
 margin:0 auto;
 }
-.titlePage3{
+.h2Page3{
     background-color:rgb(245, 211, 166);
     width: 100%;
     height: 80px;
@@ -350,33 +326,44 @@ box-shadow: 4px 4px 8px gray;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 15px;
 }
-/* -------style de filter-box------ */
-#secondPage{
-    width: 100%;
-    height: 3000px;
-}
-#secondPage h3{
+/* -------cuadro de sugerencias------- */
+.search-input {
+    width: 60%;
+    background:#fff;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #EC255A;
+  }
+  .search-input input{
+    /* ajuste al ancho del cuadro de sugerencias */
+    width:100%;
+    height: 100%;
+    padding: 0 8%;
+    font-size: 20px;
+    border-radius:8px;
+    border:none;
     color:#EC255A;
-    size: 25px;
-}
-.filters-box{
-display:flex;
-padding: 10px 80px;
-justify-content: space-between;
-}
+    border: none;
+    }
 
-/*
-
-section div #movies-grid{
-    width: 100%;
-    height: 2500px;
-    display: flex;
-}
-section div .posterDescription{
-    width: 25%;
-    height: 300px;
-    margin:0%;
-} */
+  .autocom-box {
+    border-top: 2px;
+    background-color:#fff;
+    color:#EC255A;
+    display:flex;
+    align-items:flex;
+    justify-content: center;
+  }
+  .autocom-box div {
+    font-size: 12px;
+    color:#161853;
+    cursor: pointer;
+    text-align: center;
+    margin:auto;
+  }
+  .autocom-box div:hover {
+    background-color:#f191aa;
+  }
 
 footer{
     background-color: #161853;
