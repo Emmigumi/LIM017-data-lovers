@@ -121,11 +121,9 @@ for (let i = 0; i < numeroPaginas; i++) {
 const moviesGrid = document.querySelector("#movies-grid");
 for (let i = 0; i < films.length; i++) {
     const list = `
-    <div>
-    <a href="#">
-    <img src="${films[i].poster}" alt="">
-    </a>
-    <label>${films[i].title}</label>
+    <div class="posterDescription">
+    <a href="#"><img src="${films[i].poster}" alt=""></a>
+    <div class="titleDescription"><label>${films[i].title}</label></div>
     </div>`;
     moviesGrid.insertAdjacentHTML("beforeend", list);
 }
