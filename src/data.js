@@ -22,7 +22,6 @@ export const filterDataProducer = (filterProducer) => {
   );
   return resultProducer;
 };
-/* console.log(filterDataProducer("Isao Takahata")); */
 
 //-------------Usando Sort(), según el score-------------
 let compareAscending = (a, b) => {
@@ -41,7 +40,6 @@ let compareDescending = (a, b) => {
   }
 };
 
-/* console.log("Hole",compareDescending("1999","2000")); */
 export const sortData = (order, films) => {
   if (order === "Asc") {
     const resultSort = films.sort(compareAscending);

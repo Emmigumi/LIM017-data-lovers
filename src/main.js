@@ -132,12 +132,10 @@ function filmsMoviesBy(films) {
     moviesGrid.innerHTML = "";
     for (let i = 0; i < films.length; i++) {
         const list2 = `
-        <div>
         <a href="#">
         <img src="${films[i].poster}" alt="">
         </a>
-        <label>${films[i].title}</label>
-        </div>`;
+        <label>${films[i].title}</label>`;
         moviesGrid.insertAdjacentHTML("beforeend", list2);
     }
 }
