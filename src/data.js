@@ -75,3 +75,5 @@ data.films.forEach((pelicula) => {
   });
 });
 /* console.log(NewArrayPeople2); */
+
+
