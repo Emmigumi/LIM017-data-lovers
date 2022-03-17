@@ -122,7 +122,7 @@ span{
 }
 .form input{
     width: 50%;
-    height: 45%;
+    height: 35%;
     border-radius: 10px;
     text-align: center;
     color: #EC255A;
@@ -139,7 +139,7 @@ border:none;
 } */
 .form button{
     width: 10%;
-    height: 40%;
+    height: 35%;
     font-size: 100%;
     margin: auto 8%;
     border-radius: 8px;
@@ -246,6 +246,20 @@ transition: .2s ease all;
     height: 95%;/* agregado */
     vertical-align: top;
 }
+/* ------MenuResponsive---------- */
+.menuResponsive__lavel, .menuResponsive__input{
+    display:none;
+}
+
+/* .icon__menu{
+    font-size:26px;
+    color:white;
+    cursor:pointer;
+    width: 26px;
+    height:100%;
+    display:flex;
+    align-items:center;
+}
 
 /*-------- Estilos de Movies -----*/
 #secondPage{
@@ -320,6 +334,60 @@ transition: .2s ease all;
 
 /* ---- ---- ---- Media Queries ---- ---- ---- */
 @media screen and (max-width:600px) {
+
+    /* -------MenuResponsive----- */
+    #Menu{
+    justify-content: space-evenly;
+    display: flex;
+    align-items:center;
+    }
+    .img__menu{
+    width: 18%;
+    border-radius: 50%;
+    height: 99%;
+    margin: 0.5% 10%;
+    }
+    #Menu span {
+    width: 25%;
+    padding-top: 1%;
+    }
+    
+    .menuResponsive__lavel {
+    display: block;
+    cursor: pointer;
+    width: 30%;
+    margin-top: 7%;
+    padding-left: 12%;
+    }
+    .menuResponsive__lavel img{
+   /*  height:80px; */
+    display:fixed;
+    }
+#menuResponsive__for:checked ~ .partOfMenu{
+    height:130px;
+    visibility:visible;
+    opacity: 1;
+}
+    /* -----Menu sin desglozar------ */
+    .partOfMenu{
+    position:fixed;
+    height:20%;/* --20% */
+    top:20%;
+    background: #f191aa;
+    width:30%;/* --20% */
+    right: 0;
+    flex-direction: column;
+    z-index: 100;
+    align-items: center;
+    opacity: 0;
+    visibility:hidden;
+    clip-path: circle(0 at center);
+    transition: clip-path 1s ease-in-out;
+    }
+    .menuResponsive__input:checked + .partOfMenu{
+        clip-path: circle(100% at center);
+    }
+    /* --------Carrucel Responsive----------- */
     .peliculas-recomendadas .contenedor-carousel{
         overflow: visible;
     }
