@@ -28,7 +28,7 @@ body {
 .Menu{
     list-style: none;
     background-color: #161853;
-    width: 99%;
+    width: 100%;
     height: 138px;
     justify-content: space-between;
     display:flex;
@@ -74,42 +74,59 @@ span{
 .partOfMenu li:hover{
     background: #EC255A;
 }
-
+/* ---------Ordenamiento de onePage----------- */
+#onePage{
+    display: flex;
+    flex-direction: column;
+}
 .portada{
-    width: 1280px;
-    height: 723px;
+    width: 100%;
+    height: 70%;
     position: relative;
-    overflow: hidden;
 }
-
+.img{
+    width: 100%;
+    height: 50%;
+    margin: auto;
+    justify-items: center;
+}
 .portada img{
-    width: 1166px;
-    height: 600px;
-    margin: 10px 8%;
+    width: 90%;
+    height: 50%;
+    margin: 0 5%;
+    padding-top: 5%;
 }
-
 .form{
-    background-color:#161853;
-    width: 976px;
-    height: 172px;
-    margin: 0 152px;
-    border-radius:16px;
-    border:none;
-    position:absolute;
-    top:550px;
-    display:flex;
+    background-color: #161853;
+    width: 80%;
+    height: 20%;
+    margin: 0 10%;
+    border-radius: 16px;
+    border: none;
+    position: absolute;
+    top: 90%;
+    display: flex;
     align-items: center;
-    box-shadow: 4px 4px 8px gray;
+    box-shadow: 4px 4px 8px grey;
 }
 
 .form label {
-    width: 134px;
-    height: 40px;
-    font-size:20px;
+    width: 20%;
+    height: 45%;
+    font-size: 120%;
     margin: auto;
-    padding:10px 0px;
+    padding-top: 1.3%;
+    padding-right: 1%;
     text-align: center;
-    color:aliceblue;
+    color: aliceblue;
+}
+.form input{
+    width: 50%;
+    height: 45%;
+    border-radius: 10px;
+    text-align: center;
+    color: #EC255A;
+    border: none;
 }
 /* #word_search{ */
 /* ajuste al ancho del cuadro de sugerencias */
@@ -121,22 +138,24 @@ height: 100%; */
 border:none;
 } */
 .form button{
-    width:99px;
-    height: 40px;
-    margin: auto;
-    border-radius:8px;
-    background-color:#EC255A;
-    color:aliceblue;
+    width: 10%;
+    height: 40%;
+    font-size: 100%;
+    margin: auto 8%;
+    border-radius: 8px;
+    background-color: #EC255A;
+    color: aliceblue;
     border: none;
 }
 .history{
-width:972px;
-height:160px;
-margin: 0 152px;
+    width: 90%;
+    height: 25%;
+    margin: 3% 5%;
+    padding-top: 4%;
 }
 .history h3{
 color:#EC255A;
-font-size: 15px;
+font-size: 30px;
 }
 .history p{
     text-align: justify;
@@ -235,6 +254,7 @@ transition: .2s ease all;
 
 .peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
     width: 100%;
+    height: 95%;/* agregado */
     vertical-align: top;
 }
 
