@@ -123,7 +123,7 @@ for (let i = 0; i < films.length; i++) {
     const list = `
     <div class="posterDescription">
     <a href="#"><img src="${films[i].poster}" alt=""></a>
-    <div class="titleDescription"><label>${films[i].title}</label></div>
+    <div class="titleDescription"><label><b>${films[i].title}</b></label></div>
     </div>`;
     moviesGrid.insertAdjacentHTML("beforeend", list);
 }

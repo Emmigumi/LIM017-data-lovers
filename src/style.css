@@ -110,7 +110,6 @@ span{
     align-items: center;
     box-shadow: 4px 4px 8px grey;
 }
-
 .form label {
     width: 20%;
     height: 45%;
@@ -161,7 +160,6 @@ font-size: 30px;
 .history p{
     text-align: justify;
 }
-
 .contenedor{
     width: 90%;
     margin: auto;
@@ -286,25 +284,57 @@ transition: .2s ease all;
     padding: 16px 0;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
 }
+.posterDescription img{
+    width: 90%;
+    height: 90%;
+
+}
 .filters-box{
     display: flex;
     flex-wrap: wrap;
     margin: 10px;
     justify-content: space-evenly;
 }
-.filterDesign{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border-radius: 3px;
-    border-color:#161853;
-    color: -internal-light-dark(#595959, white);
-    cursor: default;
 
-
+.filter_1 {
+    margin:5px 5px;
+    border-radius: 5px;	
+    border:1px solid #d9d9d9;
+    height:30px;
+    overflow: hidden;
+    width: 200px;
+    position:relative;
+ }
+ select {
+    background: transparent;
+    border: none;
+    color:#595959;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 250px;
+ }
+ select:focus{
+     outline: none;
 }
+.filter_1::after{
+     content:"\025be"; /* para crear nuevamente el ícono */
+     color: white;
+     display:table-cell;
+     padding-top:7px;
+     text-align:center;
+     width:30px;
+     height:30px;
+     background-color: #161853;
+     position:absolute;
+     top:0;
+     right:0px;	
+     pointer-events: none;
+ }
 
 /* ---- ---- ---- Media Queries ---- ---- ---- */
 @media screen and (max-width:600px) {
+
     /* -------MenuResponsive----- */
     #Menu{
     justify-content: space-evenly;
@@ -377,7 +407,7 @@ transition: .2s ease all;
     .posterDescription{
         width:45%;
     }
-    .filters-box{
+    .select{
         align-items: center;
         flex-direction: column;
     }
@@ -407,7 +437,6 @@ margin:0 auto;
     text-align: center;
     width:30%;
 }
-
 .listSearchMovie{
     list-style: none;
     display:flex;
@@ -415,7 +444,6 @@ margin:0 auto;
     margin: 0 auto;
     justify-content: space-between;
 }
-
 .listSearchMovie li{
     width:60%;
     text-align: center;
@@ -474,7 +502,6 @@ box-shadow: 4px 4px 8px gray;
     color:#EC255A;
     border: none;
     }
-
   .autocom-box {
     border-top: 2px;
     background-color:#fff;
@@ -495,7 +522,20 @@ box-shadow: 4px 4px 8px gray;
   }
 
 footer{
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: end; */
     background-color: #161853;
     height: 200px;
     color: white;
+}
+footer .content_1,
+footer .content_2{
+    margin: 15px;
+    width: 47%;
+}
+footer .content_2{
+    font-size: 30px;
+    
 }
