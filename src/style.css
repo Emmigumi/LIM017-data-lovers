@@ -452,14 +452,14 @@ footer{
         height: 25%;
         text-align: center;
 }
-.contacto < a{
+
+.contacto > a{
     margin-right: 10px;
     font-size: 20px;
     height: 25px;
 }
 }
 
-}
 
 /*-------- Maquetado de la tercera pag -----*/
 #threePage{
@@ -565,7 +565,7 @@ footer .content_2{
 /* -------------FOOTER, Jammie----------- */
 .contacto{
     display: flex;
-    height: 25px;
+    height: 10px;
 }
 .content_1 .contacto .fas {
     color:#fff;
@@ -591,14 +591,23 @@ footer .content_3{
     height: 200%;
     margin: 4% auto;
 }
-.red-social a{
+.red-social{
+    list-style: none;
+    display:flex;
+}
+footer .content_1 .Box .red-social li {
     display: inline-block;
     text-decoration: none;
     width: 45px;
     height: 45px;
     line-height: 45px;
-    color: #fff;
     margin-right: 10px;
     background-color:#060722;
     text-align: center;
+}
+footer .content_1 .Box .red-social li a{
+    color: #fff;
+}
+footer .content_1 .Box .red-social li a:hover{
+    color:#EC255A;
 }
