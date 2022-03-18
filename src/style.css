@@ -27,13 +27,6 @@ body {
 }
 
 .Menu{
-  /*   list-style: none;
-    background-color: #161853;
-    width: 100%;
-    height: 138px;
-    justify-content: space-between;
-    display:flex;
-    align-items: flex; */
     list-style: none;
     background-color: #161853;
     width: 100%;
@@ -135,15 +128,7 @@ span{
     color: #EC255A;
     border: none;
 }
-/* #word_search{ */
-/* ajuste al ancho del cuadro de sugerencias */
-/* width:100%;
-height: 100%; */
-/* -------------------- */
-/* margin: auto; */
-/* border-radius:8px;
-border:none;
-} */
+
 .form button{
     width: 10%;
     height: 35%;
@@ -257,16 +242,6 @@ transition: .2s ease all;
 /* ------MenuResponsive---------- */
 .menuResponsive__lavel, .menuResponsive__input{
     display:none;
-}
-
-/* .icon__menu{
-    font-size:26px;
-    color:white;
-    cursor:pointer;
-    width: 26px;
-    height:100%;
-    display:flex;
-    align-items:center;
 }
 
 /*-------- Estilos de Movies -----*/
@@ -413,7 +388,7 @@ transition: .2s ease all;
     height: 15%;
     margin: auto 40%;
     padding-top: 0.3%;
-    
+
     }
     .form input{
     width: 70%;
@@ -452,6 +427,38 @@ transition: .2s ease all;
     .filter_1{
         padding: 5px 0;
     }
+    /* --------FOOTER RESPONSIVE-JAMM */
+footer{
+    bottom: 0;
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: end; */
+    background-color: #161853;
+    height: 200px;
+    color: white;
+}
+
+    footer .content_1{
+    margin: 15px;
+    width: 47%;
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    /* height: 25%; */
+    flex-direction: column;
+}
+
+    .content_1 a{
+        height: 25%;
+        text-align: center;
+}
+.contacto < a{
+    margin-right: 10px;
+    font-size: 20px;
+    height: 25px;
+}
+}
+
 }
 
 /*-------- Maquetado de la tercera pag -----*/
@@ -523,7 +530,7 @@ box-shadow: 4px 4px 8px gray;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 15px;
 }
-
+/* ------footer----------- */
 footer{
     bottom: 0;
     display: flex;
@@ -533,12 +540,65 @@ footer{
     height: 200px;
     color: white;
 }
-footer .content_1,
+footer .content_1{
+    margin: 15px;
+    width: 47%;
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: space-evenly;
+}
 footer .content_2{
     margin: 15px;
     width: 47%;
-}
-footer .content_2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: space-evenly;
     font-size: 30px;
-    
+    height: 85%;
+}
+
+/* -------------FOOTER, Jammie----------- */
+.contacto{
+    display: flex;
+    height: 25px;
+}
+.content_1 .contacto .fas {
+    color:#fff;
+    /* background-color:#060722; */
+    margin-right: 10px;
+    height: 30px;
+}
+.content_1 .contacto a{
+    font-size: 15px;
+}
+footer .content_3{
+    font-size: 50%;
+}
+.Box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    height: 80px;
+}
+.Box h2{
+    font-size: 15px;
+    height: 200%;
+    margin: 4% auto;
+}
+.red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color:#060722;
+    text-align: center;
 }
