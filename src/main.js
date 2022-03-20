@@ -184,9 +184,9 @@ producers.addEventListener('change', (e) => {
     moviesGrid.insertAdjacentHTML("beforeend", selectedProducer);
 })
 //----------Ordenar con la funcion sortData-----------------------------------------
-const sectionOrderBox= document.getElementById("filterByOrder");
+const sectionOrderBox = document.getElementById("filterByOrder");
 sectionOrderBox.addEventListener('change', (e) => {
-   // console.log("change", e.target.value);
+    // console.log("change", e.target.value);
     const orderSelected = sortData(e.target.value, films);
     //console.log(orderSelected);
     filmsMoviesBy(orderSelected);
