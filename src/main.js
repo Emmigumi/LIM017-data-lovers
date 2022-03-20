@@ -132,10 +132,10 @@ function filmsMoviesBy(films) {
     moviesGrid.innerHTML = "";
     for (let i = 0; i < films.length; i++) {
         const list2 = `
-        <a href="#">
-        <img src="${films[i].poster}" alt="">
-        </a>
-        <label>${films[i].title}</label>`;
+        <div class="posterDescription">
+        <a href="#"><img src="${films[i].poster}" alt=""></a>
+        <div class="titleDescription"><label><b>${films[i].title}</b></label></div>
+        </div>`;
         moviesGrid.insertAdjacentHTML("beforeend", list2);
     }
 }
@@ -161,7 +161,7 @@ for (let i = 0; i < DataClean.length; i++) {
 directors.addEventListener('change', (e) => {
     const selectedDirector = filterDataDirector(films, e.target.value);
     filmsMoviesBy(selectedDirector);
-    moviesGrid.insertAdjacentHTML("beforeend", selectedDirector);
+   
 })
 
 // ---- ---- Acceder a los productores ---- ----
@@ -181,7 +181,7 @@ for (let i = 0; i < DataClean2.length; i++) {
 producers.addEventListener('change', (e) => {
     const selectedProducer = filterDataProducer(films, e.target.value);
     filmsMoviesBy(selectedProducer);
-    moviesGrid.insertAdjacentHTML("beforeend", selectedProducer);
+    
 })
 //----------Ordenar con la funcion sortData-----------------------------------------
 const sectionOrderBox = document.getElementById("filterByOrder");
