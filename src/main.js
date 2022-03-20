@@ -159,7 +159,7 @@ for (let i = 0; i < DataClean.length; i++) {
     directors.insertAdjacentHTML("beforeend", list);
 }
 directors.addEventListener('change', (e) => {
-    const selectedDirector = filterDataDirector(e.target.value);
+    const selectedDirector = filterDataDirector(films, e.target.value);
     filmsMoviesBy(selectedDirector);
     moviesGrid.insertAdjacentHTML("beforeend", selectedDirector);
 })
@@ -179,7 +179,7 @@ for (let i = 0; i < DataClean2.length; i++) {
     producers.insertAdjacentHTML("beforeend", list);
 }
 producers.addEventListener('change', (e) => {
-    const selectedProducer = filterDataProducer(e.target.value);
+    const selectedProducer = filterDataProducer(films, e.target.value);
     filmsMoviesBy(selectedProducer);
     moviesGrid.insertAdjacentHTML("beforeend", selectedProducer);
 })
