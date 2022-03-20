@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="https://kit.fontawesome.com/77b1f291ae.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -13,7 +14,7 @@
     <img src="images/logo.png" class="img__menu">
     <span><b>STUDIO GHIBLI</b></span>
 
-    <label for="menuResponsive__for" class="menuResponsive__lavel">
+    <label for="menuResponsive__for" class="menuResponsive__label">
       <img src="menu.svg" class="menuResponsive__img icon__menu">
     </label>
     <input type="checkbox" id="menuResponsive__for" class="menuResponsive__input">
@@ -21,7 +22,7 @@
       <li id="inicio"><a href="#">Inicio</a></li>
       <li id="ListMovies"><a href="#">Movies</a></li>
       <li id="stadist"><a href="#">Stadistics</a></li>
-  </ul>
+    </ul>
 
   </nav>
 
@@ -33,38 +34,39 @@
         <input type="search" name="text" placeholder="  Search by keyword" id="text">
         <button class="search-button">Search</button>
       </div>
+    </div>
+
+    <div class="history">
+      <h3><b>History</b></h3><br>
+      <p>Studio Ghibli (スタジオジブリ Sutajio Jiburi?) es un estudio japonés de animación, considerado por la crítica
+        especializada y muchos cinéfilos como uno de los mejores estudios de animación del mundo en la actualidad.​</p>
+      <p>El estudio es mejor conocido por sus largometrajes animados y también ha producido varios cortometrajes,
+        comerciales de televisión y una película para televisión. Fue fundado el 15 de junio de 1985 por los directores
+        Hayao Miyazaki e Isao Takahata y el productor Toshio Suzuki, después del éxito de la película de anime de
+        Topcraft
+        Nausicaä del Valle del Viento (1984). Studio Ghibli también ha colaborado con estudios de videojuegos en el
+        desarrollo visual de varios videojuegos.</p>
+    </div>
+
+
+    <div class="peliculas-recomendadas contenedor">
+      <div class="contenedor-titulo-controles">
+        <h3>Movies</h3>
+        <div class="indicadores"></div>
       </div>
 
-      <div class="history">
-        <h3><b>History</b></h3><br>
-        <p>Studio Ghibli (スタジオジブリ Sutajio Jiburi?) es un estudio japonés de animación, considerado por la crítica
-          especializada y muchos cinéfilos como uno de los mejores estudios de animación del mundo en la actualidad.​</p>
-        <p>El estudio es mejor conocido por sus largometrajes animados y también ha producido varios cortometrajes,
-          comerciales de televisión y una película para televisión. Fue fundado el 15 de junio de 1985 por los directores
-          Hayao Miyazaki e Isao Takahata y el productor Toshio Suzuki, después del éxito de la película de anime de Topcraft
-          Nausicaä del Valle del Viento (1984). Studio Ghibli también ha colaborado con estudios de videojuegos en el
-          desarrollo visual de varios videojuegos.</p>
-      </div>
+      <div class="contenedor-principal">
+        <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
 
-
-      <div class="peliculas-recomendadas contenedor">
-        <div class="contenedor-titulo-controles">
-          <h3>Movies</h3>
-          <div class="indicadores"></div>
-        </div>
-
-        <div class="contenedor-principal">
-          <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-
-          <div class="contenedor-carousel">
-            <div class="carousel" id="carousel">
-            </div>
+        <div class="contenedor-carousel">
+          <div class="carousel" id="carousel">
           </div>
-
-          <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
         </div>
+
+        <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
       </div>
-    </section>
+    </div>
+  </section>
 
 
   <section id="secondPage">
@@ -145,31 +147,31 @@
   </section>
 
   <footer id="footer">
-      <span class="content_1"><a>© STUDIO GHIBLI - Desarrollado por Briggtte B. y Jammie H.</a>
-        <div class="contacto"><a href="#" class="fas fa-phone-alt"></a>
-        <a>01-123456</a></div>
-        <div class="contacto"><a href="#" class="fas fa-phone-alt"></a>
-        <a>02-123456</a></div>
-        <!-- AÑADIDO POR JAMMIE.SE PUEDE RETIRAR -->
-        <div class="Box">
-          <h2>SIGUENOS</h2>
-          <ul class="red-social">
-            <li><a href="https://www.facebook.com/jhurtadosanchez/" class="fa fa-facebook"></a></li>
-            <li><a href="#" class="fa fa-instagram"></a></li>
-            <li><a href="https://twitter.com/Jammie18222630" class="fa fa-twitter"></a></li>
-            <li><a href="https://youtu.be/6YTAG-T4oDA" class="fa fa-youtube"></a></li>
-          </ul>
-        </div><!-- AÑADIDO POR JAMMIE.SE PUEDE RETIRAR -->
-      </span>
-      <span class="content_2"><b>STUDIO GHIBLI</b>
-        <!-- AÑADIDO POR JAMMIE.SE PUEDE RETIRAR -->
-        <div class="content_3">
-                  <small>&copy;2022 - Todos los derechos Reservados.</small>
-            </div><!-- AÑADIDO POR JAMMIE.SE PUEDE RETIRAR -->
-      </span>
-    </footer>
+    <span class="content_1"><a>© STUDIO GHIBLI - Desarrollado por Briggtte B. y Jammie H.</a>
+      <div class="contacto"><a href="#" class="fas fa-phone-alt"></a>
+        <a>01-123456</a>
+      </div>
+      <div class="contacto"><a href="#" class="fas fa-phone-alt"></a>
+        <a>02-123456</a>
+      </div>
 
-  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+      <div class="Box">
+        <h2>SIGUENOS</h2>
+        <ul class="red-social">
+          <li><a href="https://www.facebook.com/jhurtadosanchez/" class="fa fa-facebook"></a></li>
+          <li><a href="https://www.instagram.com/brith.almendra/?hl=es-la" class="fa fa-instagram"></a></li>
+          <li><a href="https://twitter.com/Jammie18222630" class="fa fa-twitter"></a></li>
+          <li><a href="https://youtu.be/6YTAG-T4oDA" class="fa fa-youtube"></a></li>
+        </ul>
+      </div>
+    </span>
+    <span class="content_2"><b>STUDIO GHIBLI</b>
+      <div class="content_3">
+        <small>©2022 - Todos los derechos Reservados.</small>
+      </div>
+    </span>
+  </footer>
+
   <script src="main.js" type="module"></script>
 </body>
 

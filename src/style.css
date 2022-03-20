@@ -36,7 +36,7 @@ body {
 }
 
 .img__menu{
-    width: 10%;
+    width: 8%;
     border-radius: 50%;
     height: 90%;
     margin: auto;
@@ -74,6 +74,11 @@ span{
 .partOfMenu li:hover{
     background: #EC255A;
 }
+/* ------MenuResponsive---------- */
+.menuResponsive__label, .menuResponsive__input{
+    display:none;
+}
+
 /* ---------Ordenamiento de onePage----------- */
 #onePage{
     display: flex;
@@ -239,10 +244,6 @@ transition: .2s ease all;
     height: 95%;/* agregado */
     vertical-align: top;
 }
-/* ------MenuResponsive---------- */
-.menuResponsive__lavel, .menuResponsive__input{
-    display:none;
-}
 
 /*-------- Estilos de Movies -----*/
 #secondPage{
@@ -335,14 +336,14 @@ transition: .2s ease all;
     font-size:60%;
     }
     
-    .menuResponsive__lavel {
+    .menuResponsive__label {
     display: block;
     cursor: pointer;
     width: 30%;
     margin-top: 31px;
     padding-left: 12%;
     }
-    .menuResponsive__lavel img{
+    .menuResponsive__label img{
     height:50px;
    /*  display:fixed; */
     }
@@ -351,7 +352,7 @@ transition: .2s ease all;
     visibility:visible;
     opacity: 1;
 }
-    /* -----Menu sin desglozar------ */
+    /* -----Menu hamburguesa desplegado------ */
     .partOfMenu{
     position:fixed;
     height:20%;/* --20% */
@@ -367,7 +368,7 @@ transition: .2s ease all;
     clip-path: circle(0 at center);
     transition: clip-path 1s ease-in-out;
     }
-    .menuResponsive__input:checked + .partOfMenu{
+    .menuResponsive__input:checked + .partOfMenu{  
         clip-path: circle(100% at center);
     }
     /* -----onePage--------- */
@@ -460,7 +461,6 @@ footer{
 }
 }
 
-
 /*-------- Maquetado de la tercera pag -----*/
 #threePage{
     display:center;
@@ -530,12 +530,12 @@ box-shadow: 4px 4px 8px gray;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 15px;
 }
+
 /* ------footer----------- */
 footer{
     bottom: 0;
     display: flex;
     justify-content: space-between;
-    /* align-items: end; */
     background-color: #161853;
     height: 200px;
     color: white;
