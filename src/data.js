@@ -65,32 +65,73 @@ for (let i = 0; i < data.films.length; i++) {
 /* } */
 /* console.log(NewArrayPeople); */
 
-/* const NewArrayPeople2 = [];
-data.films.forEach((pelicula) => {
-  pelicula.people.forEach((personajes) => {
-    NewArrayPeople2.push(personajes);
-  });
-}); */
-//console.log(NewArrayPeople2);
 
-//-------------Usando computeStats ( data ){}, según el score-------------
+//-------------Usando computeStats ( data ){}, según el porcentaje de especie Humana-------------
+
 //1. Listar personajes de pelicula----listo
-const NewArrayPeople = [];
-
-for (let i = 0; i < data.films.length; i++) {
-  NewArrayPeople.push(data.films[i].people);
-  // console.log("Paso1",data.films[i].people);
-}
 //2.Ordenar por especie
+//3.Seleccionar a la especie humana
+//4.Calcular en porcentaje la cantidad de especie humana en cada pelicula
 
-for (let i = 0; i < NewArrayPeople[i].length; i++) {
+//1. Listar personajes de pelicula----listo
+const NewArrayPeople2 = [];
+data.films.forEach((pelicula) => {
+  pelicula.people.forEach((personaje) => {
+    personaje.movie=pelicula.title;
+    NewArrayPeople2.push(personaje);//Buscar objetos JS
+    //console.log(personaje);
+  });
+});
+console.log(NewArrayPeople2);
+
+//2.Ordenar por especie
+const filterBySpecie = (especie)=>{
+  //console.log(especie);
+  //console.log(JSON.stringify(NewArrayPeople2));sirve para comprobar
+ 
+const resultByEspecie=NewArrayPeople2.filter((people)=> {return people.specie===especie})
+return resultByEspecie;
+}
+console.log(filterBySpecie('Human'));
+
+
+/* const computeStats= (cantidaddeHumanos)=>{
+  const Humanos=cantidaddeHumanos;
+  const 
+} */
+
+
+
+/* NewArrayPeople2.forEach(arrays => arrays.forEach((object)=>{
+  return object.specie;
+/* if(object.specie==='Human'){
+  console.log('Human'); */
+
+/* let soloHumanos = object.specie
+return soloHumanos;
+      } */
+     // console.log("soloHumanos");
+
+
+
+/* const proto = {};
+const obj= Object.create(arrays);
+Object.getPrototypeOf(obj) === proto; */
+
+
+
+
+
+
+
+/* for (let i = 0; i < NewArrayPeople[i].length; i++) {
   for (let j = 0; j < NewArrayPeople[i][j].length; j++) {
-    let NewArray2 = NewArrayPeople[i][j];
+    let NewArray2 = NewArrayPeople[i][j]; */
     /* const filterDataBySpecie = (NewArray2, typeSpecie) => {
 const resultBySpecie = NewArray2.filter((s)=> s.specie === typeSpecie);
 return resultBySpecie; */
-  }
-}
+/*   }
+} */
 
 // console.log(filterDataBySpecie('Human'));
 
