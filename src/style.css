@@ -611,3 +611,15 @@ footer .content_1 .Box .red-social li a{
 footer .content_1 .Box .red-social li a:hover{
     color:#EC255A;
 }
+@media screen and (max-width:300px){
+    #Menu{
+        justify-content: space-evenly;
+        display: flex;
+        align-items:center;
+        height: 15px;
+    }
+    .partOfMenu{
+        top: 15px;
+        right: 0px;
+    }
+} 
