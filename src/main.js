@@ -1,6 +1,6 @@
 //import * as dataLovers from './data.js';
 
-import { filterDataDirector, filterDataProducer, sortData, filterDataBySpecie, computeStats } from "./data.js";
+import { filterDataDirector, filterDataProducer, sortData, filterDataBySpecie } from "./data.js";
 
 //--------MOSTRAR Y OCULTAR--------
 import data from './data/ghibli/ghibli.js';
