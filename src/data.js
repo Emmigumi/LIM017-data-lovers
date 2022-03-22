@@ -1,16 +1,11 @@
 import data from "./data/ghibli/ghibli.js";
 
-/* export function computeStats ( data ){
-return "Rayus";
-}  */
-//};
-
 //-----------Lógica de filtro para directores--------------------------------
 export const filterDataDirector = (films, nameDirector) => {
   const resultDirector = films.filter((y) => y.director === nameDirector);
   return resultDirector;
 };
-/* console.log(filterDataDirector('Hayao Miyazaki')); */
+ //console.log(filterDataDirector(data.films,'Hayao Miyazaki'));
 
 //-----------Lógica de filtro para productores--------------------------------
 export const filterDataProducer = (films, filterProducer) => {
@@ -47,24 +42,48 @@ export const sortData = (order, films) => {
   }
 };
 
-//-----------Obtener new array People--------------------------------
-/* const NewArrayPeople = [];
+//---------------computeStats------------------------
+export const computeStats = (data, tipeOfspecie) => {
+  //data=datos sin orden   hace calculo en base a la data
+  let cantByEspecie = 0; // variable que indica cuantas veces tenemos tipoEspecie dentro de algun item de people
+  // dentro de cada film
+  for(let i = 0; i < data.length; i ++ ) {
+    let People = data[i].people;
+    // dentro de cada people
+    for(let j = 0; j < data[i].people.length; j++) {
+      if(People[j].specie === tipeOfspecie) {
+        cantByEspecie++;
+      }
+    }
+  }
+  return cantByEspecie;
+};
+console.log(computeStats(data.films,"Human"));
 
+
+//-----------Obtener new array People--------------------------------
+const NewArrayPeople = [];
 for (let i = 0; i < data.films.length; i++) {
-   NewArrayPeople.push(data.films[i].people);
-  console.log(data.films[i].people);  */
-/* for (let j = 0; j < data.films[i].people.length; j++) { */
+   //NewArrayPeople.push(data.films[i].people);
+ // console.log(data.films[i].people);
+ for (let j = 0; j < data.films[i].people.length; j++) {
 /*  console.log([i]);
     if(j===23){
       console.log('x');
       console.log(data.films[j]);
     } */
 // console.log(data.films[j]);//Para conocer al elemento
-/* NewArrayPeople.push(data.films[i].people[j]); */
-/*   } */
-/* } */
-/* console.log(NewArrayPeople); */
+NewArrayPeople.push(data.films[i].people[j]);
+    }
+}
+//console.log("171pers",NewArrayPeople);
 
+
+export const filterDataBySpecie = (NewArrayPeople, filterBySpecie) => {
+  const resultBySpecie = NewArrayPeople.filter( (y) => y.specie === filterBySpecie);
+  return resultBySpecie;
+};
+console.log("aparecen 129personajesHumanos", filterDataBySpecie(NewArrayPeople,'Human'));
 
 //-------------Usando computeStats ( data ){}, según el porcentaje de especie Humana-------------
 
@@ -73,7 +92,7 @@ for (let i = 0; i < data.films.length; i++) {
 //3.Seleccionar a la especie humana
 //4.Calcular en porcentaje la cantidad de especie humana en cada pelicula
 
-//1. Listar personajes de pelicula----listo
+//1. Listar los personajes y agregar a que pelicula pertenecen (propiedad movie)----listo
 const NewArrayPeople2 = [];
 data.films.forEach((pelicula) => {
   pelicula.people.forEach((personaje) => {
@@ -82,75 +101,5 @@ data.films.forEach((pelicula) => {
     //console.log(personaje);
   });
 });
-console.log(NewArrayPeople2);
+//console.log("Aparecen 171 con propiedad movie añadido",NewArrayPeople2);
 
-//2.Ordenar por especie
-const filterBySpecie = (especie)=>{
-  //console.log(especie);
-  //console.log(JSON.stringify(NewArrayPeople2));sirve para comprobar
- 
-const resultByEspecie=NewArrayPeople2.filter((people)=> {return people.specie===especie})
-return resultByEspecie;
-}
-console.log(filterBySpecie('Human'));
-
-
-/* const computeStats= (cantidaddeHumanos)=>{
-  const Humanos=cantidaddeHumanos;
-  const 
-} */
-
-
-
-/* NewArrayPeople2.forEach(arrays => arrays.forEach((object)=>{
-  return object.specie;
-/* if(object.specie==='Human'){
-  console.log('Human'); */
-
-/* let soloHumanos = object.specie
-return soloHumanos;
-      } */
-     // console.log("soloHumanos");
-
-
-
-/* const proto = {};
-const obj= Object.create(arrays);
-Object.getPrototypeOf(obj) === proto; */
-
-
-
-
-
-
-
-/* for (let i = 0; i < NewArrayPeople[i].length; i++) {
-  for (let j = 0; j < NewArrayPeople[i][j].length; j++) {
-    let NewArray2 = NewArrayPeople[i][j]; */
-    /* const filterDataBySpecie = (NewArray2, typeSpecie) => {
-const resultBySpecie = NewArray2.filter((s)=> s.specie === typeSpecie);
-return resultBySpecie; */
-/*   }
-} */
-
-// console.log(filterDataBySpecie('Human'));
-
-//console.log("Paso3",NewArray2);
-
-/* const result = NewArrayPeople[i].specie
-    console.log("Paso3", result); */
-/*  } */
-
-/* console.log("Paso3", result); */
-
-/* export const filterDataBySpecie = (NewArrayPeople, filterBySpecie) => {
-  const resultBySpecie = NewArrayPeople.filter(
-    (y) => y.specie === filterBySpecie
-  );
-  return resultBySpecie;
-};
-console.log("Holi", filterDataBySpecie('Human')); */
-//3.Seleccionar a la especie humana
-//4.Calcular la cantidad de especie humana en cada pelicula
-
-//export const computeStats= ( films )=> {

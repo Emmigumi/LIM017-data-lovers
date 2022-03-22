@@ -1,6 +1,6 @@
 //import * as dataLovers from './data.js';
 
-import { filterDataDirector, filterDataProducer, sortData } from "./data.js";
+import { filterDataDirector, filterDataProducer, sortData, filterDataBySpecie, computeStats } from "./data.js";
 
 //--------MOSTRAR Y OCULTAR--------
 import data from './data/ghibli/ghibli.js';
@@ -139,11 +139,6 @@ function filmsMoviesBy(films) {
         moviesGrid.insertAdjacentHTML("beforeend", list2);
     }
 }
-
-
-
-
-
 // ---- ---- Acceder a los directores ---- ----
 const directors = document.querySelector("#filterDirector");
 const a = new Set([]);
@@ -192,8 +187,108 @@ sectionOrderBox.addEventListener('change', (e) => {
     filmsMoviesBy(orderSelected);
 })
 
+// --------- Función CompuTEst----------------------------------------------------
+//1.Llamado de array para las imagenes de personajes
+const NewArrayPeople = [];
+for (let i = 0; i < data.films.length; i++) {
+    for (let j = 0; j < data.films[i].people.length; j++) {
+        NewArrayPeople.push(data.films[i].people[j]);
+    }
+}
+const Page4Grid = document.querySelector("#showAllPeople");
+for (let i = 0; i < NewArrayPeople.length; i++) {
+    const list = `
+    <div class="posterDescription">
+    <a href="#"><img src="${NewArrayPeople[i].img}" alt=""></a>
+    <div class="titleDescription"><label><b>${NewArrayPeople[i].name}</b></label></div>
+    </div>`;
+    Page4Grid.insertAdjacentHTML("beforeend", list);
+}
+//2. funcion de limpieza y filtro--------------
+function filmsPeopleBy(NewArrayPeople) {
+    Page4Grid.innerHTML = "";
+    for (let i = 0; i < NewArrayPeople.length; i++) {
+        const list2 = `
+        <div class="posterDescription">
+        <a href="#"><img src="${NewArrayPeople[i].img}" alt=""></a>
+        <div class="titleDescription"><label><b>${NewArrayPeople[i].name}</b></label></div>
+        </div>`;
+        Page4Grid.insertAdjacentHTML("beforeend", list2);
+    }
+}
+//--------Acceder a las especies--------------------------------
+const BoxpeopleSpecie = document.querySelector("#filterSpecie");
+const c = new Set([]);
+NewArrayPeople.forEach(x => {
+    c.add(x.specie);
+});
+
+const DataClean3 = [...c];
+
+for (let i = 0; i < DataClean3.length; i++) {
+    const list = `
+    <option value="${DataClean3[i]}">${DataClean3[i]}</option>`;
+    BoxpeopleSpecie.insertAdjacentHTML("beforeend", list);
+}
+BoxpeopleSpecie.addEventListener('change', (e) => {
+    const selectedSpecie = filterDataBySpecie(NewArrayPeople, e.target.value);
+    filmsPeopleBy(selectedSpecie);
+})
+//--------fucion para mostrar el conteo---------------------
+/*  const cantOfSpecie = computeStats(); */
+/* console.log(Humanos) */
+
+/* const species = document.querySelector("#NumberOfSpecies");
+for (let i = 0; i < DataClean3.length; i++) {
+    const list = `
+    <label>El número de personajes es: + ${"cantOfSpecie"}</label>`;
+    species.insertAdjacentHTML("beforeend", list);
+} */
+//--------------funcionalidad Pag3-------------------------------
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------FOUR PAGE------------------------------------------------
+/* const tareas = [
+    {title : 'Castle in the sky', poster:'htttp', porcentaje_humanos:'100%'},
+    {title : 'My Neighbor Totoro', poster:'htttp', porcentaje_humanos:'5%'},
+]
+
+let crearTabla= function(lista){
+    let stringTabla = `<thead><tr><th>Title</th><th>Poster</th><th>Porcentaje</th><tr></thead>`;
+    for(let tarea of lista){
+let fila = `<tr><td>${tarea.title}</td>
+            <td>${tarea.poster}</td>
+            <td>${tarea.porcentaje}</td></tr>`;
+            stringTabla += fila;
+    }
+    return stringTabla;
+}
+document.getElementById("TablaPorcent").innerHTML=crearTabla(tareas); */
 
 
 
