@@ -255,6 +255,7 @@ BoxpeopleSpecie.addEventListener('change', (e) => {
     const selectedSpecie = filterDataBySpecie(NewArrayPeople, e.target.value);
     filmsPeopleBy(selectedSpecie);
 })
+
 //--------fucion para mostrar el conteo---------------------
 /*  const cantOfSpecie = computeStats(); */
 /* console.log(Humanos) */

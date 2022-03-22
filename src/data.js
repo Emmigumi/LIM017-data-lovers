@@ -15,7 +15,7 @@ export const filterDataProducer = (films, filterProducer) => {
   const resultProducer = films.filter((y) => y.producer === filterProducer);
   return resultProducer;
 };
-
+console.log(filterDataProducer(data.films,'Toru Hara'));
 //-------------Usando Sort(), según el score-------------
 let compareAscending = (a, b) => {
   if (a.release_date > b.release_date) {
@@ -106,13 +106,13 @@ data.films.forEach((pelicula) => {
 });
 
 //2.Ordenar por especie
-const filterBySpecie = (especie)=>{
+/* const filterBySpecie = (especie)=>{ */
   //console.log(especie);
   //console.log(JSON.stringify(NewArrayPeople2));sirve para comprobar
  
-const resultByEspecie=NewArrayPeople2.filter((people)=> {return people.specie===especie})
+/* const resultByEspecie=NewArrayPeople2.filter((people)=> {return people.specie===especie})
 return resultByEspecie;
-}
+} */
 /* console.log(filterBySpecie('Human')); */
 
 
