@@ -6,7 +6,7 @@ export const filterDataDirector = (films, nameDirector) => {
   return resultDirector;
 };
 
-/* console.log(filterDataDirector(data.films, 'Hayao Miyazaki')); */
+/* console.log(filterDataDirector(data.films, 'Hiroyuki Morita')); */
 
 
 
@@ -61,7 +61,7 @@ export const computeStats = (data, tipeOfspecie) => {
   }
   return cantByEspecie;
 };
-console.log(computeStats(data.films,"Human"));
+/* console.log(computeStats(data.films,"Human")); */
 
 
 //-----------Obtener new array People--------------------------------
@@ -86,7 +86,7 @@ export const filterDataBySpecie = (NewArrayPeople, filterBySpecie) => {
   const resultBySpecie = NewArrayPeople.filter( (y) => y.specie === filterBySpecie);
   return resultBySpecie;
 };
-console.log("aparecen 129personajesHumanos", filterDataBySpecie(NewArrayPeople,'Human'));
+/* console.log("aparecen 129personajesHumanos", filterDataBySpecie(NewArrayPeople,'Human')); */
 
 //-------------Usando computeStats ( data ){}, según el porcentaje de especie Humana-------------
 
