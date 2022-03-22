@@ -10,7 +10,7 @@ export const filterDataDirector = (films, nameDirector) => {
   const resultDirector = films.filter((y) => y.director === nameDirector);
   return resultDirector;
 };
-/* console.log(filterDataDirector('Hayao Miyazaki')); */
+/* console.log(filterDataDirector(data.films, 'Hayao Miyazaki')); */
 
 //-----------Lógica de filtro para productores--------------------------------
 export const filterDataProducer = (films, filterProducer) => {
@@ -82,7 +82,7 @@ data.films.forEach((pelicula) => {
     //console.log(personaje);
   });
 });
-console.log(NewArrayPeople2);
+/* console.log(NewArrayPeople2); */
 
 //2.Ordenar por especie
 const filterBySpecie = (especie)=>{
@@ -92,7 +92,7 @@ const filterBySpecie = (especie)=>{
 const resultByEspecie=NewArrayPeople2.filter((people)=> {return people.specie===especie})
 return resultByEspecie;
 }
-console.log(filterBySpecie('Human'));
+/* console.log(filterBySpecie('Human')); */
 
 
 /* const computeStats= (cantidaddeHumanos)=>{
