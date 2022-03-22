@@ -5,7 +5,10 @@ export const filterDataDirector = (films, nameDirector) => {
   const resultDirector = films.filter((y) => y.director === nameDirector);
   return resultDirector;
 };
- //console.log(filterDataDirector(data.films,'Hayao Miyazaki'));
+
+/* console.log(filterDataDirector(data.films, 'Hayao Miyazaki')); */
+
+
 
 //-----------Lógica de filtro para productores--------------------------------
 export const filterDataProducer = (films, filterProducer) => {
@@ -101,5 +104,28 @@ data.films.forEach((pelicula) => {
     //console.log(personaje);
   });
 });
+
+//2.Ordenar por especie
+const filterBySpecie = (especie)=>{
+  //console.log(especie);
+  //console.log(JSON.stringify(NewArrayPeople2));sirve para comprobar
+ 
+const resultByEspecie=NewArrayPeople2.filter((people)=> {return people.specie===especie})
+return resultByEspecie;
+}
+/* console.log(filterBySpecie('Human')); */
+
+
+/* export const filterDataBySpecie = (NewArrayPeople, filterBySpecie) => {
+  const resultBySpecie = NewArrayPeople.filter(
+    (y) => y.specie === filterBySpecie
+  );
+  return resultBySpecie;
+};
+console.log("Holi", filterDataBySpecie('Human')); */
+//3.Seleccionar a la especie humana
+//4.Calcular la cantidad de especie humana en cada pelicula
+
 //console.log("Aparecen 171 con propiedad movie añadido",NewArrayPeople2);
+
 

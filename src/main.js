@@ -15,7 +15,7 @@ const showInicio = document.getElementById("inicio")
 showInicio.addEventListener("click", () => {
     document.getElementById("onePage").style.display = "block";
     document.getElementById("secondPage").style.display = "none";
-    document.getElementById("threePage").style.display = "none";
+    document.getElementById("thirdPage").style.display = "none";
     document.getElementById("fourPage").style.display = "none";
     hiddenFotter.classList.remove("hidden");
     hiddenNav.classList.remove("hidden");
@@ -25,7 +25,7 @@ const showListMovie = document.getElementById("ListMovies")
 showListMovie.addEventListener("click", () => {
     document.getElementById("onePage").style.display = "none";
     document.getElementById("secondPage").style.display = "block";
-    document.getElementById("threePage").style.display = "none";
+    document.getElementById("thirdPage").style.display = "none";
     document.getElementById("fourPage").style.display = "none";
     hiddenFotter.classList.remove("hidden");
     hiddenNav.classList.remove("hidden");
@@ -35,7 +35,7 @@ const show3Page = document.querySelector(".search-button")
 show3Page.addEventListener("click", () => {
     document.getElementById("onePage").style.display = "none";
     document.getElementById("secondPage").style.display = "none";
-    document.getElementById("threePage").style.display = "block";
+    document.getElementById("thirdPage").style.display = "block";
     document.getElementById("fourPage").style.display = "none";
     hiddenFotter.classList.remove("hidden");
     hiddenNav.classList.remove("hidden");
@@ -45,7 +45,7 @@ const show4Page = document.querySelector("#stadist")
 show4Page.addEventListener("click", () => {
     document.getElementById("onePage").style.display = "none";
     document.getElementById("secondPage").style.display = "none";
-    document.getElementById("threePage").style.display = "none";
+    document.getElementById("thirdPage").style.display = "none";
     document.getElementById("fourPage").style.display = "block";
     hiddenFotter.classList.remove("hidden");
     hiddenNav.classList.remove("hidden");
@@ -124,6 +124,7 @@ for (let i = 0; i < films.length; i++) {
     <div class="posterDescription">
     <a href="#"><img src="${films[i].poster}" alt=""></a>
     <div class="titleDescription"><label><b>${films[i].title}</b></label></div>
+    <div class="titleDescription"><label><b>(${films[i].release_date})</b></label></div>
     </div>`;
     moviesGrid.insertAdjacentHTML("beforeend", list);
 }
@@ -135,10 +136,12 @@ function filmsMoviesBy(films) {
         <div class="posterDescription">
         <a href="#"><img src="${films[i].poster}" alt=""></a>
         <div class="titleDescription"><label><b>${films[i].title}</b></label></div>
+        <div class="titleDescription"><label><b>(${films[i].release_date})</b></label></div>
         </div>`;
         moviesGrid.insertAdjacentHTML("beforeend", list2);
     }
 }
+
 // ---- ---- Acceder a los directores ---- ----
 const directors = document.querySelector("#filterDirector");
 const a = new Set([]);
@@ -156,7 +159,7 @@ for (let i = 0; i < DataClean.length; i++) {
 directors.addEventListener('change', (e) => {
     const selectedDirector = filterDataDirector(films, e.target.value);
     filmsMoviesBy(selectedDirector);
-   
+
 })
 
 // ---- ---- Acceder a los productores ---- ----
@@ -176,7 +179,7 @@ for (let i = 0; i < DataClean2.length; i++) {
 producers.addEventListener('change', (e) => {
     const selectedProducer = filterDataProducer(films, e.target.value);
     filmsMoviesBy(selectedProducer);
-    
+
 })
 //----------Ordenar con la funcion sortData-----------------------------------------
 const sectionOrderBox = document.getElementById("filterByOrder");
@@ -186,6 +189,24 @@ sectionOrderBox.addEventListener('change', (e) => {
     //console.log(orderSelected);
     filmsMoviesBy(orderSelected);
 })
+
+
+//--------- Página 3 --------------------------------
+document.querySelectorAll('.accordion__button').forEach(button => {
+    button.addEventListener('click',() => {
+       const accordionContent = button.nextElementSibling;
+       
+       
+       button.classList.toggle('accordion__button--active');
+
+
+       if (button.classList.contains('accordion__button--active')){
+           accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+       }else{
+        accordionContent.style.maxHeight = 0;
+       }
+    });
+});
 
 // --------- Función CompuTEst----------------------------------------------------
 //1.Llamado de array para las imagenes de personajes
@@ -245,6 +266,7 @@ for (let i = 0; i < DataClean3.length; i++) {
     species.insertAdjacentHTML("beforeend", list);
 } */
 //--------------funcionalidad Pag3-------------------------------
+
 
 
 
