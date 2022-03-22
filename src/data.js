@@ -15,17 +15,18 @@ export const filterDataProducer = (films, filterProducer) => {
   const resultProducer = films.filter((y) => y.producer === filterProducer);
   return resultProducer;
 };
-console.log(filterDataProducer(data.films,'Toru Hara'));
+/* console.log(filterDataProducer(data.films,'Toru Hara')); */
+
 //-------------Usando Sort(), según el score-------------
-let compareAscending = (a, b) => {
+export let compareAscending = (a, b) => {
   if (a.release_date > b.release_date) {
     return 1;
   } else {
     return -1;
   }
 };
-/* console.log("Hole",compareAscending("1999","2000")); */
-let compareDescending = (a, b) => {
+/* console.log("Holi",compareAscending("1999","2000")); */
+export let compareDescending = (a, b) => {
   if (a.release_date > b.release_date) {
     return -1;
   } else {
