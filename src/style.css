@@ -114,7 +114,6 @@ span{
     align-items: center;
     box-shadow: 4px 4px 8px grey;
 }
-
 .form label {
     width: 20%;
     height: 13%;
@@ -133,7 +132,6 @@ span{
     color: #EC255A;
     border: none;
 }
-
 .form button{
     width: 10%;
     height: 35%;
@@ -157,7 +155,6 @@ font-size: 30px;
 .history p{
     text-align: justify;
 }
-
 .contenedor{
     width: 90%;
     margin: auto;
@@ -234,14 +231,13 @@ transition: .2s ease all;
     transition: .3s ease all;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
 }
-
 .peliculas-recomendadas .contenedor-carousel .carousel .pelicula:hover{
     transform: scale(1.1);
     transform-origin: center;
 }
 .peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
     width: 100%;
-    height: 95%;/* agregado */
+    height: 100%;
     vertical-align: top;
 }
 
@@ -315,6 +311,19 @@ transition: .2s ease all;
  }
 
 /* ---- ---- ---- Media Queries ---- ---- ---- */
+@media screen and (max-width:300px){
+    #Menu{
+        justify-content: space-evenly;
+        display: flex;
+        align-items:center;
+        height: 15px;
+    }
+    .partOfMenu{
+        top: 15px;
+        right: 0px;
+    }
+} 
+
 @media screen and (max-width:600px) {
     
     /* -------MenuResponsive----- */
@@ -332,10 +341,8 @@ transition: .2s ease all;
     }
     #Menu span {
     width: 25%;
-   /*  padding-top: 1%; */
     font-size:60%;
     }
-    
     .menuResponsive__label {
     display: block;
     cursor: pointer;
@@ -345,7 +352,6 @@ transition: .2s ease all;
     }
     .menuResponsive__label img{
     height:50px;
-   /*  display:fixed; */
     }
 #menuResponsive__for:checked ~ .partOfMenu{
     height:130px;
@@ -389,7 +395,6 @@ transition: .2s ease all;
     height: 15%;
     margin: auto 40%;
     padding-top: 0.3%;
-
     }
     .form input{
     width: 70%;
@@ -405,19 +410,16 @@ transition: .2s ease all;
     .peliculas-recomendadas .contenedor-carousel{
         overflow: visible;
     }
-
     .peliculas-recomendadas .contenedor-carousel .carousel{
         display: grid;
         grid-template-columns: repeat(3,1fr);
         gap: 20px;
     }
-
     .peliculas-recomendadas .indicadores,
     .peliculas-recomendadas .flecha-izquierda,
     .peliculas-recomendadas .flecha-derecha{
         display: none;
     }
-
     .posterDescription{
         width:45%;
     }
@@ -432,28 +434,22 @@ transition: .2s ease all;
 footer{
     bottom: 0;
     display: flex;
-    /* justify-content: space-between; */
-    /* align-items: end; */
     background-color: #161853;
     height: 200px;
     color: white;
 }
-
     footer .content_1{
     margin: 15px;
     width: 47%;
     display: flex;
     font-size: 15px;
     align-items: center;
-    /* height: 25%; */
     flex-direction: column;
 }
-
     .content_1 a{
         height: 25%;
         text-align: center;
 }
-
 .contacto > a{
     margin-right: 10px;
     font-size: 20px;
@@ -499,7 +495,6 @@ footer{
 .accordion__button--active::after{
     content: '\25b4';
 }
-
 .accordion__content{
     width: 95%;
     overflow: hidden;
@@ -507,14 +502,8 @@ footer{
     transition: max-height 0.2s;
     background: #f191aa;
 }
-/* --------Maquetado de la 4ta pag----------- */
 
-
-
-
-
-
-/* ------footer----------- */
+/* ------Footer----------- */
 footer{
     bottom: 0;
     display: flex;
@@ -544,15 +533,12 @@ footer .content_2{
     font-size: 30px;
     height: 85%;
 }
-
-/* -------------FOOTER, Jammie----------- */
 .contacto{
     display: flex;
     height: 10px;
 }
 .content_1 .contacto .fas {
     color:#fff;
-    /* background-color:#060722; */
     margin-right: 10px;
     height: 30px;
 }
@@ -594,15 +580,3 @@ footer .content_1 .Box .red-social li a{
 footer .content_1 .Box .red-social li a:hover{
     color:#EC255A;
 }
-@media screen and (max-width:300px){
-    #Menu{
-        justify-content: space-evenly;
-        display: flex;
-        align-items:center;
-        height: 15px;
-    }
-    .partOfMenu{
-        top: 15px;
-        right: 0px;
-    }
-} 
