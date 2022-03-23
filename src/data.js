@@ -73,6 +73,7 @@ export const computeStats = (data, tipeOfspecie) => {
   }
   return cantByEspecie;
 };
+
 /* console.log(computeStats(data.films,"Demon")); */
 
 //* Ejemplo de cómo añadir una propiedad a nuestro objeto.

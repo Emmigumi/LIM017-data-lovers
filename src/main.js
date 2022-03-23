@@ -1,5 +1,5 @@
 import data from './data/ghibli/ghibli.js';
-import { filterDataDirector, filterDataProducer, sortData, filterDataBySpecie } from "./data.js";
+import { filterDataDirector, filterDataProducer, sortData, filterDataBySpecie, /* computeStats */ } from "./data.js";
 /* eslint-disable no-undef */
 
 
@@ -245,21 +245,21 @@ for (let i = 0; i < DataClean3.length; i++) {
 }
 BoxpeopleSpecie.addEventListener('change', (e) => {
     const selectedSpecie = filterDataBySpecie(NewArrayPeople, e.target.value);
-    filmsPeopleBy(selectedSpecie);
+    filmsPeopleBy(selectedSpecie) /* += `<label>${computeStats(data.films, e.target.value)}</label>`; */
 })
 
 //*--------función para mostrar el conteo---------------------
-/*  const cantOfSpecie = computeStats(); */
+//const cantOfSpecie = computeStats();
 /* console.log(Humanos) */
 
 /* const species = document.querySelector("#NumberOfSpecies");
 for (let i = 0; i < DataClean3.length; i++) {
     const list = `
-    <label>El número de personajes es: + ${"cantOfSpecie"}</label>`;
+    <label>El número de personajes es: + ${cantOfSpecie}</label>`;
     species.insertAdjacentHTML("beforeend", list);
-} */
-
-
+}
+console.log(species);
+ */
 
 
 
