@@ -83,5 +83,4 @@ data.films.forEach((pelicula) => {
     personaje.movie=pelicula.title;
     NewArrayPeople2.push(personaje);   //? Buscar objetos JS
     console.log(personaje);
-  });
-
+  });*/
