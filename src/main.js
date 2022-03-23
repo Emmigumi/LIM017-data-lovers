@@ -1,12 +1,9 @@
-//import * as dataLovers from './data.js';
-
+import data from './data/ghibli/ghibli.js';
 import { filterDataDirector, filterDataProducer, sortData, filterDataBySpecie } from "./data.js";
 /* eslint-disable no-undef */
 
 
 //--------MOSTRAR Y OCULTAR--------
-import data from './data/ghibli/ghibli.js';
-
 const hiddenNav = document.getElementById("Menu");
 hiddenNav.classList.add("hidden");
 
@@ -53,13 +50,10 @@ show4Page.addEventListener("click", () => {
     hiddenNav.classList.remove("hidden");
 });
 
-//--------Dar uso a Search--------------------------------
-
-
+//TODO--------Search: Próxima funcionalidad--------------------------------
 
 // ---- ---- Variables para el carousel -------------------------------- ----
 const fila = document.querySelector('.contenedor-carousel');
-
 const flechaIzquierda = document.getElementById('flecha-izquierda');
 const flechaDerecha = document.getElementById('flecha-derecha');
 
@@ -83,7 +77,6 @@ flechaIzquierda.addEventListener('click', () => {
         indicadorActivo.previousSibling.classList.add('activo');
         indicadorActivo.classList.remove('activo');
     }
-
 });
 
 // ---- ---- Llamado del array para las imágenes en el carousel---- ----
@@ -161,7 +154,6 @@ for (let i = 0; i < DataClean.length; i++) {
 directors.addEventListener('change', (e) => {
     const selectedDirector = filterDataDirector(films, e.target.value);
     filmsMoviesBy(selectedDirector);
-
 })
 
 // ---- ---- Acceder a los productores ---- ----
@@ -183,6 +175,7 @@ producers.addEventListener('change', (e) => {
     filmsMoviesBy(selectedProducer);
 
 })
+
 //----------Ordenar con la funcion sortData-----------------------------------------
 const sectionOrderBox = document.getElementById("filterByOrder");
 sectionOrderBox.addEventListener('change', (e) => {
@@ -192,27 +185,24 @@ sectionOrderBox.addEventListener('change', (e) => {
     filmsMoviesBy(orderSelected);
 })
 
-
 //--------- Página 3 --------------------------------
 document.querySelectorAll('.accordion__button').forEach(button => {
-    button.addEventListener('click',() => {
-       const accordionContent = button.nextElementSibling;
-       
-       
-       button.classList.toggle('accordion__button--active');
+    button.addEventListener('click', () => {
+        const accordionContent = button.nextElementSibling;
 
+        button.classList.toggle('accordion__button--active');
 
-       if (button.classList.contains('accordion__button--active')){
-           accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-       }else{
-        accordionContent.style.maxHeight = 0;
-       }
+        if (button.classList.contains('accordion__button--active')) {
+            accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+        } else {
+            accordionContent.style.maxHeight = 0;
+        }
     });
 });
 
 // --------- Función CompuTEst----------------------------------------------------
 //1.Llamado de array para las imagenes de personajes
-const NewArrayPeople = [];
+export const NewArrayPeople = [];
 for (let i = 0; i < data.films.length; i++) {
     for (let j = 0; j < data.films[i].people.length; j++) {
         NewArrayPeople.push(data.films[i].people[j]);
@@ -258,7 +248,7 @@ BoxpeopleSpecie.addEventListener('change', (e) => {
     filmsPeopleBy(selectedSpecie);
 })
 
-//--------fucion para mostrar el conteo---------------------
+//*--------función para mostrar el conteo---------------------
 /*  const cantOfSpecie = computeStats(); */
 /* console.log(Humanos) */
 
@@ -268,7 +258,6 @@ for (let i = 0; i < DataClean3.length; i++) {
     <label>El número de personajes es: + ${"cantOfSpecie"}</label>`;
     species.insertAdjacentHTML("beforeend", list);
 } */
-//--------------funcionalidad Pag3-------------------------------
 
 
 

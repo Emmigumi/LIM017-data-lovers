@@ -5,10 +5,7 @@ export const filterDataDirector = (films, nameDirector) => {
   const resultDirector = films.filter((y) => y.director === nameDirector);
   return resultDirector;
 };
-
 /* console.log(filterDataDirector(data.films, 'Hiroyuki Morita')); */
-
-
 
 //-----------Lógica de filtro para productores--------------------------------
 export const filterDataProducer = (films, filterProducer) => {
@@ -16,6 +13,20 @@ export const filterDataProducer = (films, filterProducer) => {
   return resultProducer;
 };
 /* console.log(filterDataProducer(data.films,'Toru Hara')); */
+
+//-----------Obtener new array People--------------------------------
+export const NewArrayPeople = [];
+for (let i = 0; i < data.films.length; i++) {
+  for (let j = 0; j < data.films[i].people.length; j++) {
+    NewArrayPeople.push(data.films[i].people[j]);
+  }
+}
+
+export const filterDataBySpecie = (NewArrayPeople, filterBySpecie) => {
+  const resultBySpecie = NewArrayPeople.filter((y) => y.specie === filterBySpecie);
+  return resultBySpecie;
+};
+/* console.log("aparecen 129personajesHumanos", filterDataBySpecie(NewArrayPeople,'Human')); */
 
 //-------------Usando Sort(), según el score-------------
 export let compareAscending = (a, b) => {
@@ -51,80 +62,26 @@ export const computeStats = (data, tipeOfspecie) => {
   //data=datos sin orden   hace calculo en base a la data
   let cantByEspecie = 0; // variable que indica cuantas veces tenemos tipoEspecie dentro de algun item de people
   // dentro de cada film
-  for(let i = 0; i < data.length; i ++ ) {
+  for (let i = 0; i < data.length; i++) {
     let People = data[i].people;
     // dentro de cada people
-    for(let j = 0; j < data[i].people.length; j++) {
-      if(People[j].specie === tipeOfspecie) {
+    for (let j = 0; j < People.length; j++) { //?Cambio
+      if (People[j].specie === tipeOfspecie) {
         cantByEspecie++;
       }
     }
   }
   return cantByEspecie;
 };
- console.log(computeStats(data.films,"Demon")); 
 
+/* console.log(computeStats(data.films,"Demon")); */
 
-//-----------Obtener new array People--------------------------------
-const NewArrayPeople = [];
-for (let i = 0; i < data.films.length; i++) {
-   //NewArrayPeople.push(data.films[i].people);
- // console.log(data.films[i].people);
- for (let j = 0; j < data.films[i].people.length; j++) {
-/*  console.log([i]);
-    if(j===23){
-      console.log('x');
-      console.log(data.films[j]);
-    } */
-// console.log(data.films[j]);//Para conocer al elemento
-NewArrayPeople.push(data.films[i].people[j]);
-    }
-}
-//console.log("171pers",NewArrayPeople);
+//* Ejemplo de cómo añadir una propiedad a nuestro objeto.
 
-
-export const filterDataBySpecie = (NewArrayPeople, filterBySpecie) => {
-  const resultBySpecie = NewArrayPeople.filter( (y) => y.specie === filterBySpecie);
-  return resultBySpecie;
-};
- console.log("aparecen 129personajesHumanos", filterDataBySpecie(NewArrayPeople,'Demon'));
-
-//-------------Usando computeStats ( data ){}, según el porcentaje de especie Humana-------------
-
-//1. Listar personajes de pelicula----listo
-//2.Ordenar por especie
-//3.Seleccionar a la especie humana
-//4.Calcular en porcentaje la cantidad de especie humana en cada pelicula
-
-//1. Listar los personajes y agregar a que pelicula pertenecen (propiedad movie)----listo
-const NewArrayPeople2 = [];
+/* const NewArrayPeople2 = [];
 data.films.forEach((pelicula) => {
   pelicula.people.forEach((personaje) => {
     personaje.movie=pelicula.title;
-    NewArrayPeople2.push(personaje);//Buscar objetos JS
-    //console.log(personaje);
-  });
-});
-
-//2.Ordenar por especie
-/* const filterBySpecie = (especie)=>{ */
-  //console.log(especie);
-  //console.log(JSON.stringify(NewArrayPeople2));sirve para comprobar
- 
-/* const resultByEspecie=NewArrayPeople2.filter((people)=> {return people.specie===especie})
-return resultByEspecie;
-} */
-/* console.log(filterBySpecie('Human')); */
-
-
-/* export const filterDataBySpecie = (NewArrayPeople, filterBySpecie) => {
-  const resultBySpecie = NewArrayPeople.filter(
-    (y) => y.specie === filterBySpecie
-  );
-  return resultBySpecie;
-};
-console.log("Holi", filterDataBySpecie('Human')); */
-//3.Seleccionar a la especie humana
-//4.Calcular la cantidad de especie humana en cada pelicula
-
-//console.log("Aparecen 171 con propiedad movie añadido",NewArrayPeople2);
+    NewArrayPeople2.push(personaje);   //? Buscar objetos JS
+    console.log(personaje);
+  });*/
