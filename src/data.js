@@ -75,8 +75,8 @@ export const computeStats = (data, tipeOfspecie) => {
 };
 /* console.log(computeStats(data.films,"Demon")); */
 
-
 //* Ejemplo de cómo añadir una propiedad a nuestro objeto.
+
 /* const NewArrayPeople2 = [];
 data.films.forEach((pelicula) => {
   pelicula.people.forEach((personaje) => {
@@ -84,7 +84,4 @@ data.films.forEach((pelicula) => {
     NewArrayPeople2.push(personaje);   //? Buscar objetos JS
     console.log(personaje);
   });
-});*/
-
-
 
