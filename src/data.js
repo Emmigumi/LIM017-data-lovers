@@ -62,32 +62,32 @@ export const computeStats = (data, tipeOfspecie) => {
   }
   return cantByEspecie;
 };
-/* console.log(computeStats(data.films,"Human")); */
+ console.log(computeStats(data.films,"Demon")); 
 
 
 //-----------Obtener new array People--------------------------------
-/* const NewArrayPeople = [];
-for (let i = 0; i < data.films.length; i++) { */
+const NewArrayPeople = [];
+for (let i = 0; i < data.films.length; i++) {
    //NewArrayPeople.push(data.films[i].people);
  // console.log(data.films[i].people);
- /* for (let j = 0; j < data.films[i].people.length; j++) { */
+ for (let j = 0; j < data.films[i].people.length; j++) {
 /*  console.log([i]);
     if(j===23){
       console.log('x');
       console.log(data.films[j]);
     } */
 // console.log(data.films[j]);//Para conocer al elemento
-/* NewArrayPeople.push(data.films[i].people[j]);
+NewArrayPeople.push(data.films[i].people[j]);
     }
-} */
+}
 //console.log("171pers",NewArrayPeople);
 
 
- /* const filterDataBySpecie = (NewArrayPeople, filterBySpecie) => {
+export const filterDataBySpecie = (NewArrayPeople, filterBySpecie) => {
   const resultBySpecie = NewArrayPeople.filter( (y) => y.specie === filterBySpecie);
   return resultBySpecie;
-}; */
-/* console.log("aparecen 129personajesHumanos", filterDataBySpecie(NewArrayPeople,'Human')); */
+};
+ console.log("aparecen 129personajesHumanos", filterDataBySpecie(NewArrayPeople,'Demon'));
 
 //-------------Usando computeStats ( data ){}, según el porcentaje de especie Humana-------------
 
@@ -97,21 +97,21 @@ for (let i = 0; i < data.films.length; i++) { */
 //4.Calcular en porcentaje la cantidad de especie humana en cada pelicula
 
 //1. Listar los personajes y agregar a que pelicula pertenecen (propiedad movie)----listo
-/* const NewArrayPeople2 = [];
+const NewArrayPeople2 = [];
 data.films.forEach((pelicula) => {
   pelicula.people.forEach((personaje) => {
     personaje.movie=pelicula.title;
     NewArrayPeople2.push(personaje);//Buscar objetos JS
     //console.log(personaje);
   });
-}); */
+});
 
 //2.Ordenar por especie
-/*  const filterBySpecie = (especie)=>{ */
+/* const filterBySpecie = (especie)=>{ */
   //console.log(especie);
   //console.log(JSON.stringify(NewArrayPeople2));sirve para comprobar
  
-/*  const resultByEspecie=NewArrayPeople2.filter((people)=> {return people.specie===especie})
+/* const resultByEspecie=NewArrayPeople2.filter((people)=> {return people.specie===especie})
 return resultByEspecie;
 } */
 /* console.log(filterBySpecie('Human')); */
@@ -124,7 +124,7 @@ return resultByEspecie;
   return resultBySpecie;
 };
 console.log("Holi", filterDataBySpecie('Human')); */
+//3.Seleccionar a la especie humana
+//4.Calcular la cantidad de especie humana en cada pelicula
 
 //console.log("Aparecen 171 con propiedad movie añadido",NewArrayPeople2);
-
-
