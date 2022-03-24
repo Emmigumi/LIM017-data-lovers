@@ -2,6 +2,8 @@
   "env": {
     "jest": true,
     "es6": true
+   /*  "jsdom": true */
+
   }
 
 }
