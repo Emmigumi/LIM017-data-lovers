@@ -1,6 +1,6 @@
 import { describe, it } from 'eslint/lib/rule-tester/rule-tester';
 import { filterDataDirector, filterDataProducer, sortData, compareAscending, compareDescending, NewArrayPeople, filterDataBySpecie, computeStats } from '../src/data.js';
-/* import {filmsMoviesBy} from '../src/main.js'; */
+
 
 const datitos = [{
     title: "The Cat Returns",
@@ -104,7 +104,11 @@ describe('Test of compareAscending', () => {
     });
     it('compare movies with dates', () => {
         const ascendente = -1;
-        expect(compareAscending("1988", "2002")).toEqual(ascendente);
+        expect(compareAscending({release_date:"1988"},{release_date:"2002"})).toEqual(ascendente);
+    });
+    it('compare movies with dates', () => {
+        const ascendente = 1;
+        expect(compareAscending({release_date:"2002"},{release_date:"1988"})).toEqual(ascendente);
     })
 });
 
@@ -114,7 +118,12 @@ describe('Test of compareDescending', () => {
     });
     it('compare movies with dates', () => {
         const valor = 1;
-        expect(compareDescending("1988", "2002")).toEqual(valor);
+        expect(compareDescending({release_date:"1988"},{release_date: "2002"})).toEqual(valor);
+    });
+
+    it('compare movies with dates', () => {
+        const valor = -1;
+        expect(compareDescending({release_date:"2002"},{release_date: "1988"})).toEqual(valor);
     })
 });
 
@@ -171,10 +180,3 @@ describe('Test of computeStats', () => {
     })
 });
 
-//-------------------Test de main.js --------------------
-/* describe ('filmsMoviesBy', () =>{
-    it('ffrefe', () =>{
-        const el = filmsMoviesBy ();
-        expect(el.id).toBe("moviesGrid");
-    })
-}); */

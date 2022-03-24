@@ -29,7 +29,7 @@ export const filterDataBySpecie = (NewArrayPeople, filterBySpecie) => {
 /* console.log("aparecen 129personajesHumanos", filterDataBySpecie(NewArrayPeople,'Human')); */
 
 //-------------Usando Sort(), según el score-------------
-export let compareAscending = (a, b) => {
+export const compareAscending = (a, b) => {
   if (a.release_date > b.release_date) {
     return 1;
   } else {
@@ -37,7 +37,7 @@ export let compareAscending = (a, b) => {
   }
 };
 /* console.log("Holi",compareAscending("1999","2000")); */
-export let compareDescending = (a, b) => {
+export const compareDescending = (a, b) => {
   if (a.release_date > b.release_date) {
     return -1;
   } else {
