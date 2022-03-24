@@ -1,5 +1,5 @@
 import data from './data/ghibli/ghibli.js';
-import { filterDataDirector, filterDataProducer, sortData, filterDataBySpecie, /* computeStats */ } from "./data.js";
+import { filterDataDirector, filterDataProducer, sortData, filterDataBySpecie, computeStats } from "./data.js";
 /* eslint-disable no-undef */
 
 
@@ -49,8 +49,6 @@ show4Page.addEventListener("click", () => {
     hiddenFotter.classList.remove("hidden");
     hiddenNav.classList.remove("hidden");
 });
-
-//TODO--------Search: Próxima funcionalidad--------------------------------
 
 // ---- ---- Variables para el carousel -------------------------------- ----
 const fila = document.querySelector('.contenedor-carousel');
@@ -245,66 +243,12 @@ for (let i = 0; i < DataClean3.length; i++) {
 }
 BoxpeopleSpecie.addEventListener('change', (e) => {
     const selectedSpecie = filterDataBySpecie(NewArrayPeople, e.target.value);
-    filmsPeopleBy(selectedSpecie) /* += `<label>${computeStats(data.films, e.target.value)}</label>`; */
+    const CantidadDeEspecie= computeStats(data.films, e.target.value);
+    const messageCantidadDeEspecie= `<div><label>El número de personajes es: ${CantidadDeEspecie}</label></div>`;
+    const BoxMessageCDEspecie= document.getElementById("NumberOfSpecies");
+    BoxMessageCDEspecie.innerHTML=messageCantidadDeEspecie;
+    filmsPeopleBy(selectedSpecie);
 })
-
-//*--------función para mostrar el conteo---------------------
-//const cantOfSpecie = computeStats();
-/* console.log(Humanos) */
-
-/* const species = document.querySelector("#NumberOfSpecies");
-for (let i = 0; i < DataClean3.length; i++) {
-    const list = `
-    <label>El número de personajes es: + ${cantOfSpecie}</label>`;
-    species.insertAdjacentHTML("beforeend", list);
-}
-console.log(species);
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//--------------FOUR PAGE------------------------------------------------
-/* const tareas = [
-    {title : 'Castle in the sky', poster:'htttp', porcentaje_humanos:'100%'},
-    {title : 'My Neighbor Totoro', poster:'htttp', porcentaje_humanos:'5%'},
-]
-
-let crearTabla= function(lista){
-    let stringTabla = `<thead><tr><th>Title</th><th>Poster</th><th>Porcentaje</th><tr></thead>`;
-    for(let tarea of lista){
-let fila = `<tr><td>${tarea.title}</td>
-            <td>${tarea.poster}</td>
-            <td>${tarea.porcentaje}</td></tr>`;
-            stringTabla += fila;
-    }
-    return stringTabla;
-}
-document.getElementById("TablaPorcent").innerHTML=crearTabla(tareas); */
-
-
 
 
 //Esto nos permite insertar información directa, manteniendo la semántica requerida en html, desde la data ghibli.
@@ -324,7 +268,7 @@ for (let i=0; i<films.length; i++) {
     <li>"${films[i].rt_score}"</li>`;
 descriptionAllMovies.insertAdjacentHTML("beforeend", list);
 } */
-
+//TODO--------Search: Próxima funcionalidad--------------------------------
 //-----funcionalidad al search-------------
 /*  function filterItems(query) {
     return data.filter(function(el) {
