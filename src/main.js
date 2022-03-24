@@ -3,6 +3,7 @@ import { filterDataDirector, filterDataProducer, sortData, filterDataBySpecie, c
 /* eslint-disable no-undef */
 
 
+
 //--------MOSTRAR Y OCULTAR--------
 const hiddenNav = document.getElementById("Menu");
 hiddenNav.classList.add("hidden");
@@ -122,7 +123,7 @@ for (let i = 0; i < films.length; i++) {
     moviesGrid.insertAdjacentHTML("beforeend", list);
 }
 
-function filmsMoviesBy(films) {
+export function filmsMoviesBy(films) {
     moviesGrid.innerHTML = "";
     for (let i = 0; i < films.length; i++) {
         const list2 = `
@@ -243,10 +244,10 @@ for (let i = 0; i < DataClean3.length; i++) {
 }
 BoxpeopleSpecie.addEventListener('change', (e) => {
     const selectedSpecie = filterDataBySpecie(NewArrayPeople, e.target.value);
-    const CantidadDeEspecie= computeStats(data.films, e.target.value);
-    const messageCantidadDeEspecie= `<div><label>El número de personajes es: ${CantidadDeEspecie}</label></div>`;
-    const BoxMessageCDEspecie= document.getElementById("NumberOfSpecies");
-    BoxMessageCDEspecie.innerHTML=messageCantidadDeEspecie;
+    const CantidadDeEspecie = computeStats(data.films, e.target.value);
+    const messageCantidadDeEspecie = `<div><label>El número de personajes es: ${CantidadDeEspecie}</label></div>`;
+    const BoxMessageCDEspecie = document.getElementById("NumberOfSpecies");
+    BoxMessageCDEspecie.innerHTML = messageCantidadDeEspecie;
     filmsPeopleBy(selectedSpecie);
 })
 

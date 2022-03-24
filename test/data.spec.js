@@ -1,5 +1,6 @@
 import { describe, it } from 'eslint/lib/rule-tester/rule-tester';
 import { filterDataDirector, filterDataProducer, sortData, compareAscending, compareDescending, NewArrayPeople, filterDataBySpecie, computeStats } from '../src/data.js';
+/* import {filmsMoviesBy} from '../src/main.js'; */
 
 const datitos = [{
     title: "The Cat Returns",
@@ -169,3 +170,11 @@ describe('Test of computeStats', () => {
         expect(computeStats(a, "Demon")).toEqual(number);
     })
 });
+
+//-------------------Test de main.js --------------------
+/* describe ('filmsMoviesBy', () =>{
+    it('ffrefe', () =>{
+        const el = filmsMoviesBy ();
+        expect(el.id).toBe("moviesGrid");
+    })
+}); */
