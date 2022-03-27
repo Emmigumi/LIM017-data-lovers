@@ -510,7 +510,7 @@ export default {
         {
           "id": "227c01a6-4e29-4582-bc4b-35106a704ab0",
           "name": "Mrs. Yokokawa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/39/SeitaMother.png",
+          "img": "https://s4.anilist.co/file/anilistcdn/character/large/b133870-kfO1GVk2plls.png",
           "gender": "Female",
           "age": "Adult",
           "eye_color": "Black",
@@ -520,7 +520,7 @@ export default {
         {
           "id": "023306e3-9fc6-4d1d-b681-d4649dcbfff9",
           "name": "Kiyoshi Yokokawa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/f/f6/SeitaFather3.jpg",
+          "img": "data:image/jpeg;base64,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",
           "gender": "Male",
           "age": "40",
           "eye_color": "Black",
@@ -530,7 +530,7 @@ export default {
         {
           "id": "0e18b23d-1f21-4a83-a6de-f01147624875",
           "name": "Seita's Aunt",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/09/SeitaAunt.jpg",
+          "img": "https://smc1417.files.wordpress.com/2013/08/20130805-123508.jpg",
           "gender": "Female",
           "age": "Elder",
           "eye_color": "Black",
@@ -710,7 +710,7 @@ export default {
         {
           "id": "4a2e2cee-08ca-4d44-9564-2b3e5421bafb",
           "name": "Fio Piccolo",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/1/16/Fio_%282%29.jpg",
+          "img": "https://pbs.twimg.com/media/EoLJpZNW8AACERU.jpg",
           "gender": "Female",
           "age": "17",
           "eye_color": "Brown",
@@ -1021,7 +1021,7 @@ export default {
         {
           "id": "34277bec-7401-43fa-a00a-5aee64b45b08",
           "name": "Eboshi",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/9/9f/Eboshi.png",
+          "img": "https://i.pinimg.com/236x/ce/8b/9a/ce8b9a543dc83fb26303cde3502e4e8f--miyazaki-studio-ghibli.jpg",
           "gender": "Female",
           "age": "Adult",
           "eye_color": "Hazel",
@@ -1742,7 +1742,7 @@ export default {
         {
           "id": "0cb26464-3416-4490-8f42-cd9d7276884e",
           "name": "Kōichi",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/4/49/Sosuke%27s_Father.png",
+          "img": "https://areajugones.sport.es/wp-content/uploads/2021/05/koichi-studio-ghibli.png",
           "gender": "Male",
           "age": "30",
           "eye_color": "Dark brown",
@@ -2224,7 +2224,7 @@ export default {
         {
           "id": "a21fbdd5-16bc-4931-80d0-3ce89ffce778",
           "name": "Sutemaru",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/37/Sutemaru.PNG",
+          "img": "https://cdn.anisearch.com/images/character/screen/51/51147/full/344835.webp",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",
@@ -2330,7 +2330,7 @@ export default {
         {
           "id": "28d07ace-c309-48c6-b48e-ae2ece3a238c",
           "name": "Anna Sasaki",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/a/ae/Anna.png",
+          "img": "https://animesher.com/orig/0/96/969/9694/animesher.com_anna-sasaki-girl-when-marnie-was-there-969406.gif",
           "gender": "Female",
           "age": "12",
           "eye_color": "Blue",
@@ -2360,7 +2360,7 @@ export default {
         {
           "id": "66bca178-9920-4ec3-91e9-0d5b8a76dba1",
           "name": "Setsu Oiwa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/6/6e/Setsu.jpg",
+          "img": "https://s4.anilist.co/file/anilistcdn/character/large/b144277-z6XMVEi8Y4nV.jpg",
           "gender": "Female",
           "age": "50-60",
           "eye_color": "Dark brown",
@@ -2370,7 +2370,7 @@ export default {
         {
           "id": "5b8e4413-f943-40ba-8f9f-0ba059a401f0",
           "name": "Hisako",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/9/93/Hisako.png",
+          "img": "https://pa1.narvii.com/6324/b5dc7cd42c68799c4318243cc0e11221781c6ad2_hq.gif",
           "gender": "Female",
           "age": "Elder",
           "eye_color": "Dark brown",
@@ -2400,7 +2400,7 @@ export default {
         {
           "id": "31b49ef6-ee60-4603-b983-e67fa0718aa9",
           "name": "Kiyomasa Ōiwa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d7/Kiyomasa.jpg",
+          "img": "https://areajugones.sport.es/wp-content/uploads/2021/05/kiyomasa-oiwa-studio-ghibli.jpeg",
           "gender": "Male",
           "age": "50-60",
           "eye_color": "Dark brown",
@@ -2410,7 +2410,7 @@ export default {
         {
           "id": "5d52d16f-ce72-41bd-8d88-436e206d9449",
           "name": "Doctor Yamashita",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8a/Yamashita.jpg",
+          "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdfUGc_VvMVN9MAfkYFO5yVJvAUEVFwFM4X9dnJ_gXpzLHBUYa92wDSz52W3yAon9sBso&usqp=CAU",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",

@@ -33,12 +33,13 @@ showListMovie.addEventListener("click", () => {
 
 const show3Page = document.querySelector(".search-button")
 show3Page.addEventListener("click", () => {
-    document.getElementById("onePage").style.display = "none";
+    document.getElementById("onePage").style.display = "block";
     document.getElementById("secondPage").style.display = "none";
-    document.getElementById("thirdPage").style.display = "block";
+    document.getElementById("thirdPage").style.display = "none";
     document.getElementById("fourthPage").style.display = "none";
     hiddenFotter.classList.remove("hidden");
     hiddenNav.classList.remove("hidden");
+    alert("Working in page");
 });
 
 const show4Page = document.querySelector("#stadist")
