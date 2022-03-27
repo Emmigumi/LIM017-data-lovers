@@ -44,15 +44,15 @@ Porque desean conocer los personajes más queridos,
 #### Problema 1:
 Al correr el primer test, tuvimos un error con la función Set() ya que el package no la reconocía; la función sí realizaba el filtrado; sin embargo el test no se ejecutaba.
 
-(images/Error1_1.jpeg)
+![Esquema](images/Error1_1.jpeg)
 
 Para solucionar el problema, se insertó una línea de código en el archivo main.js para deshabilitar lo indefinido. Luego, en el archivo .eslintrc se colocó en el env el código "es6": true.
-(images/Error1_2.jpeg)
-(images/Error1_3.jpeg)
+![Esquema](images/Error1_2.jpeg)
+![Esquema](images/Error1_3.jpeg)
 #### Problema 2:
 Luego de ejecutar el test, pudimos identificar que el test salió un error ya que el array inicial era extenso, entonces creamos un nuevo array con los datos a testear.
-(images/Error2_1.jpeg)
-(images/Error2_2.jpeg)
+![Esquema](images/Error2_1.jpeg)
+![Esquema](images/Error2_2.jpeg)
 
 En base a ello, se prosiguió con testear las demás funciones del archivo data.js, consiguiendo finalmente npm run test
 100% en Stmts, Funcs, Lines y 87.5% en Branch.
