@@ -17,20 +17,18 @@ Nuestro producto se dirige a todas las personas que sean fans de las animaciones
 Adquirir información ordenada, de forma rápida y fácil.
 #### ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
 Los datos más relevantes que desean conocer son:
-* Personajes:
-- Edad, género, nombre, animación.
-Porque desean conocer cuántos y cuáles son.
-A la vez que existen muchas especies, por ello para los usuarios es importante saber que tipos de especies existen.
+* Personajes: Edad, género, nombre, animación.
+    Porque desean conocer cuántos y cuáles son.
+    A la vez que existen muchas especies, por ello para los usuarios es importante saber que tipos de especies existen.
 * Directores y productores: Peliculas realizadas
-- Porque estos son las mentes detrás de una gran animación.
-* Animaciones: fecha de estreno, directores productores, descripción y personajes.
+    Porque estos son las mentes detrás de una gran animación.
+* Animaciones: fecha de estreno, directores productores descripción y personajes.
 
 #### ¿Cuándo utilizarían el producto?
 Cuando deseen confirmar la información de las animaciones realizadas por Studios Ghibli.
-#### Toda tu investigación previa debe tener como resultado todas las Historias de Usuario de tu proyecto.
 ## 3.Historias de usuario
 Planificamos 6 historias de usuario que describen en los criterios de aceptación las funcionalidades técnicas y usuarias que mínimamente tienen que cumplirse. Dichas historias de usuario, fueron desglosadas en tareas que fueron asignadas a cada programadora.
-![History](Historias de usuario.png)
+![History](HU.png)
 #### Desarrollo
 Primero decidimos preparar y revisar los recursos necesarios para el desarrollo del proyecto, uno de ellos fue comprender cuales eran las [necesidades del usuario](https://github.com/Laboratoria/LIM017-data-lovers/blob/main/src/data/ghibli/README.md).
 #### Prototipo de baja fidelidad
@@ -38,7 +36,7 @@ Primero decidimos preparar y revisar los recursos necesarios para el desarrollo 
 Decidimos implementar 4 cards que al seleccionarlos filtracen las peliculas por director/productor, personajes, vehículos y locaciones.
 ![Prototipo](Prototipo1.jpeg)
 
-###### Boceto 2:
+###### Boceto 2: Landing
 Decidimos separar directores de productores y añadimos la sección de animaciones. Considerando que sería más ordenado y funcional.
 ![Prototipo](Prototipo2.jpeg)
 #### Prototipo de alta fidelidad
@@ -57,11 +55,11 @@ Puedes ver el prototipo de alta fidelidad desarrollado en Figma [aquí](https://
 #### Problema 1:
 Al correr el primer test, tuvimos un error con la función Set() ya que el package no la reconocía; la función sí realizaba el filtrado; sin embargo el test no se ejecutaba.
 
-![Error1](scr/images/Error1_1.jpeg)
+![Error1](Error1_1.jpeg)
 
 Para solucionar el problema, se insertó una línea de código en el archivo main.js para deshabilitar lo indefinido. Luego, en el archivo .eslintrc se colocó en el env el código "es6": true.
-![Error1.2](scr/images/Error1_2.jpeg)
-![Error1.3](images/Error1_3.jpeg)
+![Error1.2](Error1_2.jpeg)
+![Error1.3](Error1_3.jpeg)
 #### Problema 2:
 Luego de ejecutar el test, pudimos identificar que el test salió un error ya que el array inicial era extenso, entonces creamos un nuevo array con los datos a testear.
 ![Error2.1](Error2_1.jpeg)
