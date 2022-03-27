@@ -1,6 +1,12 @@
 #secondPage #thirdPage #fourthPage{
     display: none;
 }
+#thirdPage{
+    display: none;
+}
+#fourthPage{
+    display: none;
+}
 @font-face {
     font-family: Poppins, sans-serif;
     src: url(Fonts/Poppins-Regular.ttf);
