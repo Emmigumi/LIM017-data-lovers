@@ -225,6 +225,7 @@ function filmsPeopleBy(NewArrayPeople) {
         <div class="posterDescription">
         <a href="#"><img src="${NewArrayPeople[i].img}" alt=""></a>
         <div class="titleDescription"><label><b>${NewArrayPeople[i].name}</b></label></div>
+        <div><label><b>Edad: ${NewArrayPeople[i].age} años</b></label></div>
         </div>`;
         Page4Grid.insertAdjacentHTML("beforeend", list2);
     }

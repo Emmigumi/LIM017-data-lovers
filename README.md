@@ -9,7 +9,7 @@
 * [5. Problemas detectados en test de usabilidad](#5-Problemas-detectados-en-test-de-usabilidad)
 ***
 ## 1.Introducción
-En este proyecto desarrollaremos una pagina web que permita visualizar un conjunto de datos de Studio Ghibli y manejarlo a través de filtrados, ordenamientos y/o cálculos agregados. 
+En este proyecto desarrollaremos una página web que permita visualizar un conjunto de datos de Studio Ghibli y manejarlo a través de filtrados, ordenamientos y/o cálculos agregados.
 ## 2.Resumen del proyecto
 #### ¿Quiénes son los principales usuarios del producto?
 Nuestro producto se dirige a todas las personas que sean fans de las animaciones producidas por Studio Ghibli, o se sientan de alguna forma identificadas con la animación, personajes, etc y deseen conocer más.
@@ -19,7 +19,7 @@ Adquirir información ordenada, de forma rápida y fácil, sin necesidad de busc
 Los datos más relevantes que desean conocer son:
 * Personajes
 - Edad, género, nombre, animación
-Porque desean conocer los personajes más queridos, 
+Porque desean conocer los personajes más queridos,
 * Directores
 * Productores
 * Vehículos
