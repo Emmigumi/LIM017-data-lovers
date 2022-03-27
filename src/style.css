@@ -1,13 +1,4 @@
-#secondPage {
-    display: none;
-}
-#thirdPage {
-    display: none;
-}
-#fourPage {
-    display: none;
-}
-#block {
+#secondPage #thirdPage #fourthPage{
     display: none;
 }
 @font-face {
@@ -241,14 +232,14 @@ transition: .2s ease all;
     vertical-align: top;
 }
 
-/*-------- Estilos de Movies -----*/
+/*-------- Second Page -----*/
 #secondPage{
-   margin: 10px;
+    margin: 10px;
 }
 #secondPage h3{
     color: #000000;
 }
-.movies{
+.movies__persons{
     display: flex;
     flex-wrap: wrap;
     margin: 16px;
@@ -503,6 +494,17 @@ footer{
     background: #f191aa;
 }
 
+/* ------Cuarta página----------- */
+
+#fourthPage h3{
+    margin: 10px;
+}
+ #fourthPage h3{
+     color: #000000;
+ }
+ #NumberOfSpecies{
+     text-align: center;
+ }
 /* ------Footer----------- */
 footer{
     bottom: 0;

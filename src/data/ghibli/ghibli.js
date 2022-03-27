@@ -296,7 +296,7 @@ export default {
         {
           "id": "c491755a-407d-4d6e-b58a-240ec78b5061",
           "name": "Chibi Totoro",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c5/Little_Totoro_spirit_moving.gif",
+          "img": "https://cdn.shopify.com/s/files/1/0185/4636/products/Chibi_Totoro.png?v=1616628140",
           "gender": "NA",
           "age": "",
           "eye_color": "Black",
@@ -1497,7 +1497,7 @@ export default {
         {
           "id": "1287b275-6c32-4113-947f-519316d4a6be",
           "name": "Witch of the Waste",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/e/e1/Howls-moving-castle-disneyscreencaps.com-10507.jpg",
+          "img": "https://c.tenor.com/GpmWUVIerDIAAAAd/howls-moving-castle-witch-of-the-waste.gif",
           "gender": "Female",
           "age": "59",
           "eye_color": "Brown",
@@ -1527,7 +1527,7 @@ export default {
         {
           "id": "45237428-93bf-4dd6-97ce-f10647300429",
           "name": "Prince Justin or Turnip Head",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d9/Prince_Justin.png",
+          "img": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/05/TurnipHead-Prince-Justin-Howls-Moving-Castle.jpg?q=50&fit=crop&w=963&h=541&dpr=1.5",
           "gender": "Male",
           "age": "20-30",
           "eye_color": "Grey",

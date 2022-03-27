@@ -169,7 +169,6 @@ const a = [
             "specie": "Demon"
         }]
     }]
-
 describe('Test of computeStats', () => {
     it('computeStats is a function', () => {
         expect(typeof computeStats).toBe('function');
@@ -179,4 +178,3 @@ describe('Test of computeStats', () => {
         expect(computeStats(a, "Demon")).toEqual(number);
     })
 });
-
