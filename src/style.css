@@ -262,6 +262,11 @@ transition: .2s ease all;
     padding: 16px 0;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
 }
+
+.posterDescription a{
+    width:90%;
+    height:90%;
+}
 .posterDescription img{
     width: 90%;
     height: 90%;
