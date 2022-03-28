@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Lovers</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="https://kit.fontawesome.com/77b1f291ae.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="Menu" id="Menu">
+    <img src="images/logo.png" class="img__menu">
+    <span><b>STUDIO GHIBLI</b></span>
+
+    <label for="menuResponsive__for" class="menuResponsive__label">
+      <img src="menu.svg" class="menuResponsive__img icon__menu">
+    </label>
+    <input type="checkbox" id="menuResponsive__for" class="menuResponsive__input">
+    <ul class="partOfMenu">
+      <li id="inicio"><a href="#">Inicio</a></li>
+      <li id="ListMovies"><a href="#">Movies</a></li>
+      <li id="stadist"><a href="#">Stadistics</a></li>
+    </ul>
+  </nav>
+
+  <section id="onePage">
+    <div class="portada">
+      <div class="img"><img src="images/carrusel_1.jpg" alt=""></div>
+      <div class="form">
+        <label>Search for</label>
+        <input type="search" name="text" placeholder="  Search by keyword" id="text">
+        <button class="search-button">Search</button>
+      </div>
+    </div>
+
+    <div class="history">
+      <h3><b>History</b></h3><br>
+      <p>Studio Ghibli (スタジオジブリ Sutajio Jiburi?) es un estudio japonés de animación, considerado por la crítica
+        especializada y muchos cinéfilos como uno de los mejores estudios de animación del mundo en la actualidad.​</p>
+      <p>El estudio es mejor conocido por sus largometrajes animados y también ha producido varios cortometrajes,
+        comerciales de televisión y una película para televisión. Fue fundado el 15 de junio de 1985 por los directores
+        Hayao Miyazaki e Isao Takahata y el productor Toshio Suzuki, después del éxito de la película de anime de
+        Topcraft
+        Nausicaä del Valle del Viento (1984). Studio Ghibli también ha colaborado con estudios de videojuegos en el
+        desarrollo visual de varios videojuegos.</p>
+    </div>
+
+
+    <div class="peliculas-recomendadas contenedor">
+      <div class="contenedor-titulo-controles">
+        <h3>Movies</h3>
+        <div class="indicadores"></div>
+      </div>
+
+      <div class="contenedor-principal">
+        <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+        <div class="contenedor-carousel">
+          <div class="carousel" id="carousel">
+          </div>
+        </div>
+
+        <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="secondPage">
+    <h3>Filters by:</h3>
+    <div class="filters-box">
+
+      <div id="sectionFilterDirector" class="filter_1">
+        <select id="filterDirector" class="filterDesign">
+          <option value="" selected>Directors</option>
+        </select>
+      </div>
+
+      <div id="sectionFilterProducer" class="filter_1">
+        <select id="filterProducer" class="filterDesign">
+          <option value="" selected>Producers</option>
+        </select>
+      </div>
+
+      <div id="sectionOrder" class="filter_1">
+        <select id="filterByOrder" class="filterDesign">
+          <option value="" selected>Año de estreno</option>
+          <option value="Asc">Ascendente</option>
+          <option value="Des">Descendente</option>
+        </select>
+      </div>
+
+    </div>
+    <div class="movies__persons" id="movies-grid"></div>
+  </section>
+
+
+  <section id="thirdPage">
+    <h3>Movie</h3>
+    <div class="Page3">
+      <ul class="listSearchMovie">
+        <img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg" alt=""
+          class="img_listSearchMovie">
+        <li><a>Descripción de la pelicula</a></li>
+      </ul>
+    </div> <!-- Esto se añadirá con la data en main -->
+    <div class="accordion">
+      <button type="button" class="accordion__button"><b>People</b></button>
+      <div class="accordion__content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, earum quia id doloremque dicta laborum
+          rerum ut at fugit adipisci porro maxime, voluptates magnam ea distinctio praesentium qui! Recusandae, earum.
+        </p>
+      </div>
+    </div>
+    <div class="accordion">
+      <button type="button" class="accordion__button"><b>Locations</b></button>
+      <div class="accordion__content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, earum quia id doloremque dicta laborum
+          rerum ut at fugit adipisci porro maxime, voluptates magnam ea distinctio praesentium qui! Recusandae, earum.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <button type="button" class="accordion__button"><b>Vehicles</b></button>
+      <div class="accordion__content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, earum quia id doloremque dicta laborum
+          rerum ut at fugit adipisci porro maxime, voluptates magnam ea distinctio praesentium qui! Recusandae, earum.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section id="fourthPage">
+    <h3>Elige a tus personajes según su especie</h3>
+    <div class="filter_1">
+      <select id="filterSpecie" class="filterDesign">
+      </select>
+    </div>
+    <div id="NumberOfSpecies">
+    </div>
+    <div class="movies__persons" id="showAllPeople"></div>
+  </section>
+
+  <footer id="footer">
+    <span class="content_1"><a>© STUDIO GHIBLI - Desarrollado por Briggtte B. y Jammie H.</a>
+      <div class="contacto"><a href="#" class="fas fa-phone-alt"></a>
+        <a>01-123456</a>
+      </div>
+      <div class="contacto"><a href="#" class="fas fa-phone-alt"></a>
+        <a>02-123456</a>
+      </div>
+
+      <div class="Box">
+        <h2>SIGUENOS</h2>
+        <ul class="red-social">
+          <li><a href="https://www.facebook.com/jhurtadosanchez/" class="fa fa-facebook"></a></li>
+          <li><a href="https://www.instagram.com/brith.almendra/?hl=es-la" class="fa fa-instagram"></a></li>
+          <li><a href="https://twitter.com/Jammie18222630" class="fa fa-twitter"></a></li>
+          <li><a href="https://youtu.be/6YTAG-T4oDA" class="fa fa-youtube"></a></li>
+        </ul>
+      </div>
+    </span>
+    <span class="content_2"><b>STUDIO GHIBLI</b>
+      <div class="content_3">
+        <small>©2022 - Todos los derechos Reservados.</small>
+      </div>
+    </span>
+  </footer>
+
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>
